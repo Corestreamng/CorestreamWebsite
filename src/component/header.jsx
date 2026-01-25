@@ -23,12 +23,11 @@ export default function Header () {
 
   return (
     <>
-    <div className='fixed md:hidden w-full z-[999] px-2 py-2'>
-      
-      <div className='flex justify-between'>
-            <div className='mt-6'>
-              <img src={Logo} alt="" className='size-30'/>
-            </div>
+    <div className='fixed md:hidden w-full z-[999] px-2 py-2 bg-white/65'>
+      <div className='flex justify-between z-[999]'>
+            <Link to="/" className='mt-6'>
+              <img src={Logo} alt="" className='w-50'/>
+            </Link>
             <button onClick={toggleMenu} >
         {show ? (
           <svg
@@ -47,7 +46,7 @@ export default function Header () {
     </svg>
         ) : (
    
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-10  mt-6 text-black">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-10  mt-6 text-white">
   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
 </svg>
 
@@ -58,16 +57,21 @@ export default function Header () {
        
 
      { show &&(
-       <div>
-       <div className='md:hidden w-100 h-100 absolute bg-white z-[999] inset-0 mt-17'>
+       <div> <div className='md:hidden w-full fixed h-full mt-14 z-999 inset-0 bg-white'>
+                 <div className='flex flex-col space-y-12 text-gray-500 mx-6 mt-12'>       
+                   <Link to="/about" onClick={() => setShow(false)} className='text-xl font-mono hover:scale-105'>About</Link>
+                   <Link to="/client" onClick={() => setShow(false)} className='text-xl font-mono hover:scale-105'>Client Stories</Link>
+                   <Link to="/service" onClick={() => setShow(false)} className='text-xl font-mono hover:scale-105'>Service</Link>
+                   <Link to="/community" onClick={() => setShow(false)} className='text-xl font-mono hover:scale-105'>Community</Link>
+                   <Link to="/contact" onClick={() => setShow(false)} className='text-xl font-mono hover:scale-105'>Contact Us</Link>
+                     <Link to="/career" onClick={() => setShow(false)} className='text-xl font-mono hover:scale-105'>Career</Link>
+                       <Link to="/blog" onClick={() => setShow(false)} className='text-xl font-mono hover:scale-105'>Our Blog</Link>
+                 </div>
+               </div>
+              </div>
+               )}
 
-       </div>
-        
-       </div>
-      
-)}
-
-     {/* large screen */}
+   
 
           <div className={'hidden md:block w-full h-25 fixed z-[999] ' + (scrolled ? "bg-white/5 text-gray-400 " : "bg-transparent text-white")}>
             <div className='flex flex-cols'>
@@ -84,14 +88,11 @@ export default function Header () {
                         <Link to="/contact" className=' hover:text-white'>Contact Us</Link>
                         <Link to="/career" className=' hover:text-white'>Career</Link>
                         <Link to="/blog" className=' hover:text-white'>Our Blog</Link>
+                       <div className=''>
+                    <button className='w-34 h-12 rounded-2xl  bg-red-900 text-white text-md border-2 border-indigo-200'>Share with us</button>
+                </div>  
                     </ul>
                 </div>
-
-                <div className='flex ml-15 mt-8'>
-                    <button className='w-34 h-12 rounded-2xl  bg-white/15 text-white text-md border-2 border-indigo-200'>Share with us</button>
-
-                </div>
-
             </div>
 
           </div>
