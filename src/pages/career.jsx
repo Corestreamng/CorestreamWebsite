@@ -182,7 +182,53 @@ export default function Career() {
                  <p className='text-3xl text-center md:text-7xl text-gray-800 py-50'>Come <span className='text-3xl md:text-6xl font-bold text-gray-900'>build</span> with us</p>
              <p className='text-gray-600 tracking-tight text-center -mt-45 text-base md:text-lg'>Corestream is home to the best minds in tech. Our people are smart,</p>
              <p className='text-gray-600 text-center tracking-tight text-base md:text-lg'> creative, forward-thinking, and fun.</p>
-                <button className='w-full md:w-50 h-13 mt-8 rounded-xl text- font-semibold  px-3 md:mx-145 text-gray-600 border-2  border-gray-400'>View Open Roles</button>
+                <button className='wave-btn w-full md:w-50 h-13 mt-8 rounded-xl text- font-semibold  px-3 md:mx-145 text-gray-600 border-2  border-gray-400'><span>View Open Roles</span></button>
+                <style>
+{`
+.wave-btn {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+
+.wave-btn span {
+  position: relative;
+  z-index: 2; /* ensures text is above the wave */
+  transition: color 0.3s ease;
+}
+
+.wave-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    #ffffff,
+    #dcfce7,
+    #86efac,
+    #dcfce7,
+    #ffffff
+  );
+  background-size: 300% 300%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1; /* behind text */
+}
+
+.wave-btn:hover::before {
+  opacity: 1;
+  animation: waveMove 3s linear infinite;
+}
+
+@keyframes waveMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+`}</style>
             </div>
         </div>
 

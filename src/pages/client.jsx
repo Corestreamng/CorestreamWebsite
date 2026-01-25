@@ -40,7 +40,7 @@ export default function About() {
             <p className="text-base text-center md:font-medium text-gray-600 max-w-xl mx-auto ">
            builds for businesses of any size and in all industries.
           </p>
-          <button className='w-40 h-12 border-2 font-semibold text-gray-600 border-green-800 rounded-xl mt-6 mb-6'>Start building</button>
+          <button className='wave-btn w-40 h-12 border-2 font-semibold text-gray-600 border-green-800 rounded-xl mt-6 mb-6'>Start building</button>
         </div>
       </div>
     </div>

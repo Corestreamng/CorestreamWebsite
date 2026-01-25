@@ -89,7 +89,7 @@ export default function Header () {
                         <Link to="/career" className=' hover:text-white'>Career</Link>
                         <Link to="/blog" className=' hover:text-white'>Our Blog</Link>
                        <div className=''>
-                    <button className='w-34 h-12 rounded-2xl  bg-red-900 text-white text-md border-2 border-indigo-200'>Share with us</button>
+                    <button className='w-34 h-12 rounded-2xl  bg-green-50 text-gray-600 -mt-2 text-md border-2 border-indigo-200'>Share with us</button>
                 </div>  
                     </ul>
                 </div>

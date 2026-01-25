@@ -8,10 +8,7 @@ export default function Section7() {
 
     
     <div className="relative w-full h-auto  md:h-200 bg-white overflow-hidden flex items-center justify-center">
-      
-      {/* SVG with single artistic dashed line */}
       <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg" >
-        {/* Flowing curved dashed line design */}
         <path
           d="M 0 400 Q 150 200, 300 300 T 600 250 T 900 400 T 1200 300"
           stroke="#1f2937"
@@ -22,8 +19,6 @@ export default function Section7() {
           className='text-gray-300'
         />
       </svg>
-
-      {/* Content */}
       <div className="w-full h-full relative z-10 text-center px-6 flex">
         <div className='hidden md:block w-90 h-130 shadow-2xl rounded-2xl -ml-50'>
             <div className=' w-60 h-60 m-auto mt-10 bg-amber-200'>
