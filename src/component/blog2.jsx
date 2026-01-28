@@ -1,7 +1,6 @@
 import React from 'react'
 import Cos from '../assets/images/cos.webp'
 import Discovery from '../assets/images/discovery.webp'
-import Header from '../component/header'
 
 export default function Blog2() {
   return (
@@ -29,8 +28,8 @@ export default function Blog2() {
             backgroundRepeat: 'no-repeat',
           }}
         >
-          <div className="absolute left-4 right-4 md:left-10 md:right-auto top-6 bg-gray-50 rounded-3xl shadow-xl p-4 md:w-[420px]">
-            <div className="w-full h-[200px] md:h-[260px] rounded-2xl overflow-hidden">
+          <div className="absolute left-4 right-4 md:left-25 md:right-auto top-6 bg-gray-50 rounded-3xl shadow-xl p-4 md:w-[520px]">
+            <div className="w-full h-[200px] md:h-[360px] rounded-2xl overflow-hidden">
               <img src={Discovery} alt="" className="w-full h-full object-cover rounded-2xl"/>
             </div>
           </div>

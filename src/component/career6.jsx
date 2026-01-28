@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Quote from '../assets/images/Quote.webp'
+import Md from '../assets/images/md.jpg'
+import Mdc from '../assets/images/mdc.jpg'
 
 export default function Career6 () {
   const [show, setShow] = useState(false)
@@ -23,8 +25,11 @@ export default function Career6 () {
                 </h2>
               </div>
 
-              <div className="mt-6">
-                <img src={Quote} alt="" className="w-10 h-10 rounded-full" />
+              <div className="mt-6 flex flex-cols">
+                <img src={Md} alt="" className="w-10 h-10 rounded-full" />
+                <div>
+                  <p className='px-3 py-3 text-gray-400'>Ceo K Motors</p>
+                </div>
               </div>
 
               <div className="hidden md:block w-24 h-24 mr-16 self-end mt-4">
@@ -43,8 +48,11 @@ export default function Career6 () {
                 <h2 className="text-xl md:text-3xl font-medium text-white">Clean and conducive work environment, Best place to improve as a person and as an engineer!</h2>
               </div>
 
-              <div className="mt-6">
-                <img src={Quote} alt="" className="w-10 h-10 rounded-full" />
+              <div className="mt-6 flex flex-cols">
+                <img src={Mdc} alt="" className="w-10 h-10 rounded-full" />
+                <div>
+                  <p className='px-3 py-3 text-gray-400'>Ceo PLA Engines</p>
+                </div>
               </div>
 
               <div className="hidden md:block w-24 h-24 mr-16 self-end mt-4">

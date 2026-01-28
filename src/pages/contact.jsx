@@ -1,22 +1,74 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
 import Tech2 from '../component/tech2'
 import Header from '../component/header'
 
 export default function Contact () {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: 'easeOut' },
+    },
+  };
 
   return (
     <>
-    <div className='h-screen '>
+    <motion.div 
+      className='h-screen '
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
         <Header/>
-        <div className=' flex justify-center'>
+        <motion.div 
+          className=' flex justify-center'
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
          <Tech2/>
-         <div className='flex flex-col mt-110 md:mt-55'>
-            <p className='text-3xl px-12 md:text-7xl text-white md:px-16'>There’s no limit to what  </p>
-             <p className='text-3xl text-center md:text-7xl text-white'>you can <span className='text-3xl md:text-7xl font-bold text-white/75'>Build</span> </p>
-             <p className='text-base md:text-lg text-gray-200 text-center py-10'>Do you have an idea or solution? Let’s work together to <br/> build it into technology</p> 
-        </div>
-         </div>
-    </div>
+         <motion.div 
+           className='flex flex-col mt-110 md:mt-55'
+           variants={containerVariants}
+           initial="hidden"
+           animate="visible"
+         >
+            <motion.p 
+              className='text-3xl px-12 md:text-7xl text-white md:px-16'
+              variants={itemVariants}
+            >
+              There's no limit to what  
+            </motion.p>
+             <motion.p 
+               className='text-3xl text-center md:text-7xl text-white'
+               variants={itemVariants}
+             >
+               you can <motion.span 
+                 className='text-3xl md:text-7xl font-bold text-white/75'
+                 whileHover={{ scale: 1.1, color: "#ffffff" }}
+               >
+                 Build
+               </motion.span> 
+             </motion.p>
+             <motion.p 
+               className='text-base md:text-lg text-gray-200 text-center py-10'
+               variants={itemVariants}
+             >
+               Do you have an idea or solution? Let's work together to <br/> build it into technology
+             </motion.p> 
+        </motion.div>
+         </motion.div>
+    </motion.div>
     
     </>
   )

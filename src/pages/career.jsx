@@ -1,13 +1,22 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
 import Header from '../component/header'
 import Mae from '../assets/images/mae.webp'
 import White from '../component/white'
 
+
 export default function Career() {
+  const pageVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.8 },
+    },
+  };
 
   return (
     <>
-     <div className='h-auto md:min-h-screen'>
+     <motion.div className='h-auto md:min-h-screen' variants={pageVariants} initial="hidden" animate="visible">
         <Header/>
           <svg
         viewBox="0 0 1200 600"
@@ -182,7 +191,7 @@ export default function Career() {
                  <p className='text-3xl text-center md:text-7xl text-gray-800 py-50'>Come <span className='text-3xl md:text-6xl font-bold text-gray-900'>build</span> with us</p>
              <p className='text-gray-600 tracking-tight text-center -mt-45 text-base md:text-lg'>Corestream is home to the best minds in tech. Our people are smart,</p>
              <p className='text-gray-600 text-center tracking-tight text-base md:text-lg'> creative, forward-thinking, and fun.</p>
-                <button className='wave-btn w-full md:w-50 h-13 mt-8 rounded-xl text- font-semibold  px-3 md:mx-145 text-gray-600 border-2  border-gray-400'><span>View Open Roles</span></button>
+                <button className='wave-btn w-full md:w-50 h-13 mt-8 rounded-xl text- font-semibold  px-3 md:mx-145 border-2  border-gray-400'><span>View Open Roles</span></button>
                 <style>
 {`
 .wave-btn {
@@ -233,7 +242,7 @@ export default function Career() {
         </div>
 
 
-     </div>
+     </motion.div>
     
     </>
   )

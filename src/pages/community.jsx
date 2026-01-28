@@ -1,9 +1,27 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
 import Pik2 from'../assets/images/pik2.png'
 import Header from '../component/header'
 import Content from '../assets/images/contents.webp'
+import Gp2 from  '../assets/images/gp2.png'
 
 export default function Community () {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: 'easeOut' },
+    },
+  };
 
   return (
     <>
@@ -19,10 +37,34 @@ export default function Community () {
   }}
 >
   <div className="absolute inset-0 mt-50"> 
-     <h2 className='text-6xl font-semibold'>The Enyata Community</h2>
-     {/* <h2  className=' text-4xl md:text-6xl'>Community</h2> */}
-    <p className='tracking-tighter py-7 text-2xl text-gray-600'>We Build-Up and empower talented people in the tech <br /> industry</p>
-      <button className='wave-btn w-55 h-15 rounded-2xl border border-gray-600 font-semibold text-md bg-white'>Join the community</button>
+     <motion.h2 
+       className='text-6xl font-semibold'
+       variants={itemVariants}
+       initial="hidden"
+       animate="visible"
+     >
+       The Enyata Community
+     </motion.h2>
+    <motion.p 
+      className='tracking-tighter py-7 text-2xl text-gray-600'
+      variants={itemVariants}
+      initial="hidden"
+      animate="visible"
+      transition={{ delay: 0.2 }}
+    >
+      We Build-Up and empower talented people in the tech <br /> industry
+    </motion.p>
+      <motion.button 
+        className='wave-btn w-55 h-15 rounded-2xl border border-gray-600 font-semibold text-md bg-white'
+        variants={itemVariants}
+        initial="hidden"
+        animate="visible"
+        transition={{ delay: 0.4 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        Join the community
+      </motion.button>
       <style>
 {`
 .wave-btn {
@@ -73,9 +115,15 @@ export default function Community () {
   </div>
 </div>
 
-      <div className='hidden md:block w-200  float-right -mt-70 inset-0 '>
-        <img src={Content} alt="" />
-
+      <div className='hidden md:block w-200  float-right -mt-100 inset-0 '>
+        <motion.img 
+          src={Gp2} 
+          alt="" 
+          className='w-600'
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+        />
       </div>
 
     </div>

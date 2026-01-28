@@ -2,13 +2,16 @@ import { useState } from "react";
 import Mami from '../assets/images/mami.webp'
 import Mae from '../assets/images/mae.webp'
 import Sxxc from '../assets/images/sxxc.svg'
+import Valu from '../assets/images/valu.jpeg'
+import Wev from '../assets/images/wev.webp'
+import Pto from '../assets/images/pto.webp'
 
 const items = [
   {
     title: "Prioritizing Your Needs",
     description:
       "We believe in putting users first. Before any development starts, we conduct thorough user research to deeply understand their needs, pain points, and desires.",
-    image: Mami,
+    image: Valu,
     icon: (
       <svg className="size-10 mx-12 mt-4 " fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
         <path d="M12 6v6l4 2" />
@@ -20,7 +23,7 @@ const items = [
     title: "Values & Principles",
     description:
       "Our core values align perfectly with Agile principles. We prioritize collaboration, open communication, and responsiveness to feedback.",
-    image: Mae,
+    image: Wev,
     icon: (
       <svg className="size-10 mx-12 mt-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" >
         <path d="M16 7a4 4 0 0 1-8 0" />
@@ -33,7 +36,7 @@ const items = [
     title: "We Work In Milestones",
     description:
       "We break our deliverables into short, focused milestones. This fosters transparency, accountability, and continuous improvement.",
-   image: Mami,
+   image: Pto,
     icon: (
       <svg className="size-10 mx-12 mt-4 " fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
         <path d="M3 12h18" />
@@ -94,7 +97,7 @@ export default function About4() {
 
 
      
-      <div className="hidden relative w-full rounded-3xl overflow-hidden m-auto  md:block -ml-16  h-[400px]">
+      <div className="hidden relative w-full rounded-3xl overflow-hidden m-auto  md:block -ml-16  h-[500px]">
         <img src={Sxxc} alt="" className="hidden md:block ml-90 rotate-12 mt-6 absolute z-20 text-gray-900 "/>        
         <img
           src={items[activeIndex].image}

@@ -14,15 +14,15 @@ export default function Community2 ()
                </div>
         </div>
         <div className='w-full h-auto flex flex-cols px-4 gap-4'>
-          <div className='w-80 h-[400px] bg-blue-800 rounded-3xl mb-4 mt-2'>
+          <div className='w-80 h-[400px] rounded-3xl mb-4 mt-2'>
             <img src={Our} alt="" className='rounded-3xl h-full object-cover '/>
           </div>
 
-          <div className='w-100 h-[600px] bg-blue-800 rounded-3xl mb-4 -mt-30'>
+          <div className='w-100 h-[600px] rounded-3xl mb-4 -mt-30'>
             <img src={Our} alt="" className='rounded-3xl h-full object-cover '/>
           </div>
               
-                <div className='w-140 h-[400px] bg-blue-800 rounded-3xl mb-4 mt-2'>
+                <div className='w-140 h-[400px rounded-3xl mb-4 mt-2'>
             <img src={Our} alt="" className='rounded-3xl h-full object-cover '/>
           </div>
         </div>

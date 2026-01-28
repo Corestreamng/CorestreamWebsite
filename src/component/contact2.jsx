@@ -49,7 +49,7 @@ export default function Contact2() {
               </div>
 
               
-              <button type="submit" className="w-full md:w-auto px-8 py-3 border border-gray-300  rounded-xl font-semibold text-gray-900 hover:bg-yellow-300 transition">Send Message
+              <button type="submit" className="w-full md:w-auto px-8 py-3 border border-gray-300  rounded-xl font-semibold text-gray-900 hover:bg-gray-300 transition">Send Message
               </button>
             </form>
           </div>

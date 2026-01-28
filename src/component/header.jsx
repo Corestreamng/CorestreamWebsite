@@ -1,102 +1,107 @@
-import { useState,useEffect } from 'react'
-import Logo from '../assets/images/logo.png'
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import Logo from "../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
-export default function Header () {
+export default function Header() {
+  const [show, setShow] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-    const [show,setShow ]= useState(false)
-     const [scrolled, setScrolled] = useState(false);
+  const toggleMenu = () => setShow((prev) => !prev);
 
-      const toggleMenu = () => {
-  setShow(prev => !prev);
-    };
-
-
-   useEffect(() => {
-     const handleScroll = () => {
-       setScrolled(window.scrollY > 100); 
-     };
-     window.addEventListener("scroll", handleScroll);
-     return () => window.removeEventListener("scroll", handleScroll);
-   }, []);
-
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-    <div className='fixed md:hidden w-full z-[999] px-2 py-2 bg-white/65'>
-      <div className='flex justify-between z-[999]'>
-            <Link to="/" className='mt-6'>
-              <img src={Logo} alt="" className='w-50'/>
+      <div className="fixed top-0 left-0 right-0 w-full md:hidden z-50 bg-white shadow-md px-4 py-3">
+        <div className="flex justify-between items-center">
+
+          <Link to="/">
+            <img src={Logo} className="w-32" />
+          </Link>
+
+          <button onClick={toggleMenu}>
+            {show ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="size-8"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* MOBILE MENU */}
+      {show && (
+        <div className="fixed inset-0 z-40 bg-white pt-24 md:hidden overflow-y-auto">
+          <div className="flex flex-col space-y-8 mx-6 text-lg pb-10">
+            <Link to="/about" onClick={() => setShow(false)}>About</Link>
+            <Link to="/client" onClick={() => setShow(false)}>Client Stories</Link>
+            <Link to="/service" onClick={() => setShow(false)}>Service</Link>
+            <Link to="/community" onClick={() => setShow(false)}>Community</Link>
+            <Link to="/contact" onClick={() => setShow(false)}>Contact Us</Link>
+            <Link to="/career" onClick={() => setShow(false)}>Career</Link>
+            <Link to="/blog" onClick={() => setShow(false)}>Our Blog</Link>
+          </div>
+        </div>
+      )}
+
+      {/* DESKTOP HEADER */}
+      <header
+        className={`hidden md:block fixed w-full z-40 transition ${
+          scrolled ? "bg-white/90 shadow-sm" : "bg-transparent"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="flex items-center justify-between h-20">
+
+            <Link to="/">
+              <img src={Logo} className="w-36" />
             </Link>
-            <button onClick={toggleMenu} >
-        {show ? (
-          <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="18" y1="6" x2="6" y2="18" />
-      <line x1="6" y1="6" x2="18" y2="18" />
-    </svg>
-        ) : (
-   
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-10  mt-6 text-white">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
-</svg>
 
-        )}     
-    </button>
-        </div>
-        </div>
-       
+            <ul className="hidden lg:flex space-x-10 text-sm text-gray-400 hover:text-gray-600">
+              <Link to="/about">About</Link>
+              <Link to="/client">Client Stories</Link>
+              <Link to="/service">Service</Link>
+              <Link to="/community">Community</Link>
+              <Link to="/contact">Contact Us</Link>
+              <Link to="/career">Career</Link>
+              <Link to="/blog">Our Blog</Link>
+            </ul>
 
-     { show &&(
-       <div> <div className='md:hidden w-full fixed h-full mt-14 z-999 inset-0 bg-white'>
-                 <div className='flex flex-col space-y-12 text-gray-500 mx-6 mt-12'>       
-                   <Link to="/about" onClick={() => setShow(false)} className='text-xl font-mono hover:scale-105'>About</Link>
-                   <Link to="/client" onClick={() => setShow(false)} className='text-xl font-mono hover:scale-105'>Client Stories</Link>
-                   <Link to="/service" onClick={() => setShow(false)} className='text-xl font-mono hover:scale-105'>Service</Link>
-                   <Link to="/community" onClick={() => setShow(false)} className='text-xl font-mono hover:scale-105'>Community</Link>
-                   <Link to="/contact" onClick={() => setShow(false)} className='text-xl font-mono hover:scale-105'>Contact Us</Link>
-                     <Link to="/career" onClick={() => setShow(false)} className='text-xl font-mono hover:scale-105'>Career</Link>
-                       <Link to="/blog" onClick={() => setShow(false)} className='text-xl font-mono hover:scale-105'>Our Blog</Link>
-                 </div>
-               </div>
-              </div>
-               )}
-
-   
-
-          <div className={'hidden md:block w-full h-25 fixed z-[999] ' + (scrolled ? "bg-white/5 text-gray-400 " : "bg-transparent text-white")}>
-            <div className='flex flex-cols'>
-                <Link to="/" className='py-7 px-18'>
-                      <img src={Logo} alt="" className='w-45'/>
-                </Link>
-
-                <div className=''>
-                    <ul className='flex justify-center text-gray-400 space-x-12 text-sm py-12 px-3'>
-                        <Link to="/about" className=' hover:text-white'>About us</Link>
-                        <Link to="/client" className=' hover:text-white'>Client Stories</Link>
-                        <Link to="/service" className=' hover:text-white'>Service</Link>
-                        <Link to="/community" className=' hover:text-white'>Community</Link>
-                        <Link to="/contact" className=' hover:text-white'>Contact Us</Link>
-                        <Link to="/career" className=' hover:text-white'>Career</Link>
-                        <Link to="/blog" className=' hover:text-white'>Our Blog</Link>
-                       <div className=''>
-                    <button className='w-34 h-12 rounded-2xl  bg-green-50 text-gray-600 -mt-2 text-md border-2 border-indigo-200'>Share with us</button>
-                </div>  
-                    </ul>
-                </div>
-            </div>
+            <button className="hidden lg:block px-6 py-2 rounded-xl border bg-green-200 border-gray-100 text-white">Share with us </button>
 
           </div>
-    
+        </div>
+      </header>
     </>
-  )
+  );
 }

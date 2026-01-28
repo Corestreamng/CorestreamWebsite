@@ -1,6 +1,10 @@
 import React from 'react'
 import Mami from '../assets/images/mami.webp'
 import Mae from '../assets/images/mae.webp'
+import Gp from '../assets/images/gp.jpeg'
+import Jimi from '../assets/images/jimi.jpeg'
+
+
 
 
 export default function About2 () {
@@ -14,13 +18,13 @@ export default function About2 () {
         <div className='w-full h-120 absolute space-y-6 md:flex justify-between items-center px-6'>
            <div className="w-full md:max-w-4xl rounded-xl overflow-hidden">
   <img
-    src={Mami}
+    src={Gp}
     alt=""
     className="w-full h-100 object-cover rounded-xl "
   />
 </div>
            <div className="hidden md:block max-w-md mx-12 mt-26 rounded-xl bg-red-900 overflow-hidden">
-           <img src={Mami} alt="" className="w-full h-auto object-cover rounded-xl" />
+           <img src={Jimi} alt="" className="w-full h-auto object-cover rounded-xl" />
            </div>
              </div>
        

@@ -1,5 +1,6 @@
 import React from 'react'
 import Mae from '../assets/images/mae.webp'
+import Uc from '../assets/images/uc.jpeg'
 
 export default function Career2 () {
 
@@ -16,7 +17,7 @@ export default function Career2 () {
             </div>
 
              <div className='w-90 rounded-3xl mx-2 h-[500px] '>
-                <img src={Mae} alt="" className='rounded-3xl object-cover h-full'/>
+                <img src={Uc} alt="" className='rounded-3xl object-cover h-full'/>
             </div>
 
              <div className='w-110 rounded-3xl mx-2 h-[250px] mt-40 '>

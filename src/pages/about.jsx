@@ -1,47 +1,95 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import White from '../component/white';
 import Header from '../component/header';
 
 export default function About() {
-
-      const texts = ["Product", "Engineering", "Solutions"];
+  const texts = ["Product", "Engineering", "Solutions"];
   const [currentIndex, setCurrentIndex] = useState(0);
 
-      useEffect(() => {
-       const interval = setInterval(() => {
+  useEffect(() => {
+    const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-      }, 4000); 
-
-    return () => clearInterval(interval); 
+    }, 4000);
+    return () => clearInterval(interval);
   }, []);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: 'easeOut' },
+    },
+  };
+
   return (
-    <div className="relative  w-full h-auto md:h-screen bg-white overflow-hidden">
-     <White />
+    <div className="relative w-full h-auto md:h-screen bg-white overflow-hidden">
+      <White />
       <div className="relative z-10 w-full h-full flex flex-col items-center justify-start">
         <Header />
-        <div className="flex flex-col items-center  mt-60 ">
-          <h4 className="text-5xl text-center md:text-7xl  text-gray-800 tracking-tighter">
+        <motion.div 
+          className="flex flex-col items-center mt-60"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.h4 
+            className="text-5xl text-center md:text-7xl text-gray-800 tracking-tighter"
+            variants={itemVariants}
+          >
             Building transformative 
-          </h4>
-          <h4 className="text-5xl text-center md:text-7xl py-2 text-gray-800 tracking-tighter">
-             technology with the best minds 
-          </h4>
-         <div className='flex flex-cols gap-4 mt-1'>
-            <h4 className="text-5xl text-center md:text-7xl  text-gray-800 tracking-tighter ">
-            in 
-          </h4>
-          <h4 className="text-5xl text-center md:text-7xl  text-green-800 font-semibold tracking-tighter ">
-             {texts[currentIndex]}
-          </h4>
-         </div>
-          <p className="text-md text-center py-5 text-gray-600 max-w-xl mx-auto">
-            We help businesses of all sizes and industries to develop tailored software   that’s scalable, flexible, and designed to improve your business
-          </p>
-          <button className='wave-btn w-40 h-12 border-2 font-semibold text-gray-600 border-green-800 rounded-xl mb-6'><span>Start Building</span></button>
-          <style>
-{`
+          </motion.h4>
+          <motion.h4 
+            className="text-5xl text-center md:text-7xl py-2 text-gray-800 tracking-tighter"
+            variants={itemVariants}
+          >
+            technology with the best minds 
+          </motion.h4>
+          <motion.div 
+            className='flex flex-cols gap-4 mt-1'
+            variants={itemVariants}
+          >
+            <h4 className="text-5xl text-center md:text-7xl text-gray-800 tracking-tighter">
+              in 
+            </h4>
+            <motion.h4 
+              className="text-5xl text-center md:text-7xl text-green-800 font-semibold tracking-tighter"
+              key={currentIndex}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              {texts[currentIndex]}
+            </motion.h4>
+          </motion.div>
+          <motion.p 
+            className="text-md text-center py-5 text-gray-600 max-w-xl mx-auto"
+            variants={itemVariants}
+          >
+            We help businesses of all sizes and industries to develop tailored software that's scalable, flexible, and designed to improve your business
+          </motion.p>
+          <motion.button 
+            className='wave-btn w-40 h-12 border-2 font-semibold text-gray-600 border-green-800 rounded-xl mb-6'
+            variants={itemVariants}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span>Start Building</span>
+          </motion.button>
+          <style>{`
 .wave-btn {
   position: relative;
   overflow: hidden;
@@ -50,8 +98,8 @@ export default function About() {
 
 .wave-btn span {
   position: relative;
-  z-index: 2; /* ensures text is above the wave */
-  color: #16a34a; /* optional: text green */
+  z-index: 2;
+  color: #16a34a;
   transition: color 0.3s ease;
 }
 
@@ -59,18 +107,11 @@ export default function About() {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    120deg,
-    #ffffff,
-    #dcfce7,
-    #86efac,
-    #dcfce7,
-    #ffffff
-  );
+  background: linear-gradient(120deg, #ffffff, #dcfce7, #86efac, #dcfce7, #ffffff);
   background-size: 300% 300%;
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 1; /* behind text */
+  z-index: 1;
 }
 
 .wave-btn:hover::before {
@@ -79,15 +120,11 @@ export default function About() {
 }
 
 @keyframes waveMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
 }
 `}</style>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

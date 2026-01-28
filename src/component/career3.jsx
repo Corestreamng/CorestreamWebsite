@@ -1,6 +1,10 @@
 import React from "react";
 import Mae from "../assets/images/mae.webp";
 import Tobi from '../assets/images/tobi.webp'
+import Vp from '../assets/images/vp.jpeg'
+import Sham from '../assets/images/sham.jpeg'
+import Sit from '../assets/images/sit.jpeg'
+import Room from '../assets/images/room.jpeg'
 
 export default function Career3() {
   return (
@@ -27,7 +31,7 @@ export default function Career3() {
       
       <div className="w-full sm:w-64 md:w-72 aspect-[3/4] rounded-b-3xl overflow-hidden">
         <img
-          src={Tobi}
+          src={Sham}
           alt=""
           className="h-full w-full object-cover"
         />
@@ -47,7 +51,7 @@ export default function Career3() {
           <div className="flex flex-col md:flex-row justify-center md:justify-end items-center gap-6 px-4">
             <div className="w-full md:w-[560px] h-64 md:h-96 rounded-3xl overflow-hidden">
               <img
-                src={Tobi}
+                src={Room}
                 alt=""
                 className="rounded-3xl object-cover w-full h-full"
               />
@@ -55,7 +59,7 @@ export default function Career3() {
 
             <div className="w-full md:w-[520px] h-56 md:h-72 rounded-3xl overflow-hidden">
               <img
-                src={Tobi}
+                src={Sit}
                 alt=""
                 className="rounded-3xl object-cover w-full h-full"
               />

@@ -1,5 +1,6 @@
 import React from 'react'
 import Mae from '../assets/images/mae.webp'
+import Ui from '../assets/images/ui.jpeg'
 
 export default function About6 () {
 
@@ -10,7 +11,7 @@ export default function About6 () {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <div className="flex justify-center">
               <div className="max-w-[450px] h-120 mt-4 rounded-3xl">
-                <img src={Mae} alt="" className="w-full h-full object-cover rounded-3xl transition-opacity duration-500"/>
+                <img src={Ui} alt="" className="w-full h-full object-cover rounded-3xl transition-opacity duration-500"/>
               </div>
             </div>
             <div className="space-y-6 px-6">

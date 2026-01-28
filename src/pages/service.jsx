@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Header from "../component/header";
 
 export default function Service() {
@@ -32,57 +33,116 @@ export default function Service() {
     return () => cancelAnimationFrame(animationFrame);
   }, []);
 
-  // Calculate total height of a single column (assuming each card ~180px including spacing)
   const leftColumnHeight = leftCards.length * 180;
   const rightColumnHeight = rightCards.length * 180;
 
+  const heroVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { 
+      opacity: 1, 
+      x: 0, 
+      transition: { duration: 0.8, ease: "easeOut" } 
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { 
+      opacity: 1, 
+      scale: 1, 
+      transition: { duration: 0.6, ease: "easeOut" } 
+    }
+  };
+
   return (
     <div>
-         <Header />
-    <div className="bg-gray-50 h-screen flex items-center justify-center">
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-7xl px-14">
+      <Header />
+      <div className="bg-gray-50 h-screen flex items-center justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-7xl px-14 gap-8">
 
-        {/* LEFT HERO */}
-        <div className="flex flex-col justify-center max-w-md text-gray-900 space-y-6">
-          <h1 className="text-4xl md:text-7xl  md:px-2 text-gray-900">Our Software development </h1>
-          <h1 className="text-4xl md:text-7xl md:px-2 font-semibold -mt-4 text-gray-950">Service</h1>
-          <p className="text-gray-600 text-xl px-2">
-            Our developers and product specialists build software solutions that help your business grow.
-          </p>
-        </div>
-
-        {/* RIGHT SCROLLING CARDS */}
-        <div className="flex items-center justify-center overflow-hidden h-auto md:h-[500px] relative">
-          <div className="grid grid-cols-2 gap-6 md:gap-10 w-full h-full relative">
-
-            {/* LEFT CARDS UP */}
-            <div
-              className="space-y-6 absolute"
-              style={{
-                top: `-${scrollPosition % leftColumnHeight}px`,
-              }}
+          {/* LEFT HERO */}
+          <motion.div 
+            className="flex flex-col justify-center max-w-md text-gray-900 space-y-6"
+            variants={heroVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.h1 
+              className="text-4xl md:text-7xl md:px-2 text-gray-900"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
             >
-              {[...leftCards, ...leftCards].map((card, i) => (
-                <Card key={i} {...card} />
-              ))}
-            </div>
-
-            {/* RIGHT CARDS DOWN */}
-            <div
-              className="space-y-6 absolute right-0"
-              style={{
-                top: `${scrollPosition % rightColumnHeight - rightColumnHeight}px`,
-              }}
+              Our Software development 
+            </motion.h1>
+            <motion.h1 
+              className="text-4xl md:text-7xl md:px-2 font-semibold -mt-4 text-gray-950"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
             >
-              {[...rightCards, ...rightCards].map((card, i) => (
-                <Card key={i} {...card} />
-              ))}
-            </div>
+              Service
+            </motion.h1>
+            <motion.p 
+              className="text-gray-600 text-xl px-2"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+            >
+              Our developers and product specialists build software solutions that help your business grow.
+            </motion.p>
+          </motion.div>
 
+          {/* RIGHT SCROLLING CARDS */}
+          <div className="flex items-center justify-center overflow-hidden h-auto md:h-[500px] relative">
+            <div className="grid grid-cols-2 gap-6 md:gap-10 w-full h-full relative">
+
+              {/* LEFT CARDS UP */}
+              <div
+                className="space-y-6 absolute"
+                style={{
+                  top: `-${scrollPosition % leftColumnHeight}px`,
+                }}
+              >
+                {[...leftCards, ...leftCards].map((card, i) => (
+                  <motion.div
+                    key={i}
+                    variants={cardVariants}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{ delay: i * 0.05 }}
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <Card {...card} />
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* RIGHT CARDS DOWN */}
+              <div
+                className="space-y-6 absolute right-0"
+                style={{
+                  top: `${scrollPosition % rightColumnHeight - rightColumnHeight}px`,
+                }}
+              >
+                {[...rightCards, ...rightCards].map((card, i) => (
+                  <motion.div
+                    key={i}
+                    variants={cardVariants}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{ delay: i * 0.05 }}
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <Card {...card} />
+                  </motion.div>
+                ))}
+              </div>
+
+            </div>
           </div>
-        </div>
 
-      </div>
+        </div>
       </div>
     </div>
   );
@@ -101,12 +161,15 @@ function Card({ color, title, text }) {
   };
 
   return (
-    <div className="w-64 md:w-72 p-4 bg-gray-50 rounded-xl shadow-md flex flex-col items-start justify-start space-y-3 border border-gray-200 h-auto">
+    <motion.div 
+      className="w-64 md:w-72 p-4 bg-gray-50 rounded-xl shadow-md flex flex-col items-start justify-start space-y-3 border border-gray-200 h-auto"
+      whileHover={{ y: -5 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
       <div className={`w-10 h-10 md:w-14 md:h-14 rounded-2xl flex items-center justify-center ${colors[color]}`}>
-       
       </div>
       <h3 className="text-lg md:text-2xl font-semibold text-gray-900">{title}</h3>
       <p className="text-gray-600 text-sm md:text-base">{text}</p>
-    </div>
+    </motion.div>
   );
 }

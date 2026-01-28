@@ -1,5 +1,8 @@
 import React from 'react'
 import Mami from '../assets/images/mami.webp'
+import Amir from '../assets/images/amir.jpeg'
+import Abdul from '../assets/images/abdul.jpeg'
+import Der from '../assets/images/der.png'
 
 export default function About3() {
 
@@ -7,12 +10,12 @@ export default function About3() {
     <>
      <div className='w-full h-auto md:min-h-190 flex flex-col'>
         <div className='w-full h-auto md:max-w-6xl  mt-4  m-auto flex gap-3 mb-4 '>
-            <div className='hidden md:block w-180 h-110 mt-4 md:flex justify-between'>
+            <div className='hidden md:flex justify-between'>
                 <div className='w-90 h-80 mt-16 mx-4 rounded-3xl '>
-                   <img src={Mami} alt="" className='rounded-xl w-full h-80 object-cover'/>
+                   <img src={Der} alt="" className='rounded-xl w-full h-80 object-cover'/>
                 </div>
                  <div className='w-90 h-110  mx-4 rounded-3xl'>
-                     <img src={Mami} alt="" className='rounded-xl w-full h-110 object-cover'/>
+                     <img src={Abdul} alt="" className='rounded-xl w-full h-110 object-cover'/>
                 </div>
             </div>
 
@@ -32,7 +35,7 @@ export default function About3() {
   </div>
 
   <div className="w-1/2 h-full rounded-3xl overflow-hidden">
-    <img src={Mami} alt=""className="w-full h-full object-cover"/>
+    <img src={Amir} alt=""className="w-full h-full object-cover"/>
   </div>
 
 </div>

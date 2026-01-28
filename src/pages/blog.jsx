@@ -1,10 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
 import Header from '../component/header'
 
 export default function Blog() {
+  const pageVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3,
+      },
+    },
+  };
 
   return (
-    <div className="relative w-full h-100 bg-gradient-to-br from-slate-50 to-blue-50 overflow-hidden">
+    <motion.div className="relative w-full h-100 bg-gradient-to-br from-slate-50 to-blue-50 overflow-hidden" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
       <Header/>
       <svg
         viewBox="0 0 1200 600"
@@ -187,6 +198,6 @@ export default function Blog() {
             </div>
        
       </div>
-    </div>
+    </motion.div>
   )
 }
