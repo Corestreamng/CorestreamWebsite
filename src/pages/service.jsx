@@ -95,11 +95,11 @@ export default function Service() {
 
           {/* RIGHT SCROLLING CARDS */}
           <div className="flex items-center justify-center overflow-hidden h-auto md:h-[500px] relative">
-            <div className="grid grid-cols-2 gap-6 md:gap-10 w-full h-full relative">
+            <div className="grid grid-cols-2 gap-8 md:gap-14 w-full h-full relative">
 
               {/* LEFT CARDS UP */}
               <div
-                className="space-y-6 absolute"
+                className="space-y-10 absolute"
                 style={{
                   top: `-${scrollPosition % leftColumnHeight}px`,
                 }}
@@ -120,7 +120,7 @@ export default function Service() {
 
               {/* RIGHT CARDS DOWN */}
               <div
-                className="space-y-6 absolute right-0"
+                className="space-y-10 absolute -right-6"
                 style={{
                   top: `${scrollPosition % rightColumnHeight - rightColumnHeight}px`,
                 }}
@@ -166,8 +166,8 @@ function Card({ color, title, text }) {
       whileHover={{ y: -5 }}
       transition={{ type: "spring", stiffness: 300 }}
     >
-      <div className={`w-10 h-10 md:w-14 md:h-14 rounded-2xl flex items-center justify-center ${colors[color]}`}>
-      </div>
+      {/* <div className={`w-10 h-10 md:w-14 md:h-14 rounded-2xl flex items-center justify-center ${colors[color]}`}>
+      </div> */}
       <h3 className="text-lg md:text-2xl font-semibold text-gray-900">{title}</h3>
       <p className="text-gray-600 text-sm md:text-base">{text}</p>
     </motion.div>
