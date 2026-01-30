@@ -88,16 +88,16 @@ export default function Header() {
             </Link>
 
             <ul className="hidden lg:flex space-x-10 text-sm text-gray-400 hover:text-gray-600">
-              <Link to="/about">About</Link>
-              <Link to="/client">Client Stories</Link>
-              <Link to="/service">Service</Link>
-              <Link to="/community">Community</Link>
-              <Link to="/contact">Contact Us</Link>
-              <Link to="/career">Career</Link>
-              <Link to="/blog">Our Blog</Link>
+              <Link to="/about"  className=' transition-transform duration-200 hover:-translate-y-1'>About</Link>
+              <Link to="/client" className=' transition-transform duration-200 hover:-translate-y-1'>Client Stories</Link>
+              <Link to="/service" className=' transition-transform duration-200 hover:-translate-y-1'>Service</Link>
+              <Link to="/community"  className=' transition-transform duration-200 hover:-translate-y-1'>Community</Link>
+              <Link to="/contact"  className=' transition-transform duration-200 hover:-translate-y-1'>Contact Us</Link>
+              <Link to="/career"  className=' transition-transform duration-200 hover:-translate-y-1'>Career</Link>
+              <Link to="/blog" className=' transition-transform duration-200 hover:-translate-y-1'>Our Blog</Link>
             </ul>
 
-            <button className="hidden lg:block px-6 py-2 rounded-xl border bg-green-200 border-gray-100 text-white">Share with us </button>
+            <Link to="/contact" className="hidden lg:block px-6 py-2 rounded-xl border bg-green-200 border-gray-100 text-white hover:scale-95">Share with us </Link>
 
           </div>
         </div>

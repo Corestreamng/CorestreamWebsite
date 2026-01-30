@@ -33,8 +33,8 @@ export default function Service() {
     return () => cancelAnimationFrame(animationFrame);
   }, []);
 
-  const leftColumnHeight = leftCards.length * 180;
-  const rightColumnHeight = rightCards.length * 180;
+  const leftColumnHeight = leftCards.length * 220;
+  const rightColumnHeight = rightCards.length * 220;
 
   const heroVariants = {
     hidden: { opacity: 0, x: -50 },
@@ -120,7 +120,7 @@ export default function Service() {
 
               {/* RIGHT CARDS DOWN */}
               <div
-                className="space-y-10 absolute -right-6"
+                className="space-y-10 absolute right-0"
                 style={{
                   top: `${scrollPosition % rightColumnHeight - rightColumnHeight}px`,
                 }}
@@ -150,14 +150,14 @@ export default function Service() {
 
 function Card({ color, title, text }) {
   const colors = {
-    blue: "border-gray-400",
-    green: "border-gray-400",
-    purple: "border-gray-400",
-    yellow: "border-gray-400",
-    red: "border-gray-400",
-    indigo: "border-gray-400",
-    teal: "border-gray-400",
-    pink: "border-gray-400",
+    blue: "bg-blue-100",
+    green: "bg-green-100",
+    purple: "bg-purple-100",
+    yellow: "bg-yellow-100",
+    red: "bg-red-100",
+    indigo: "bg-indigo-100",
+    teal: "bg-teal-100",
+    pink: "bg-pink-100",
   };
 
   return (
@@ -166,8 +166,8 @@ function Card({ color, title, text }) {
       whileHover={{ y: -5 }}
       transition={{ type: "spring", stiffness: 300 }}
     >
-      {/* <div className={`w-10 h-10 md:w-14 md:h-14 rounded-2xl flex items-center justify-center ${colors[color]}`}>
-      </div> */}
+      <div className={`w-10 h-10 md:w-14 md:h-14 rounded-2xl flex items-center justify-center ${colors[color]}`}>
+      </div>
       <h3 className="text-lg md:text-2xl font-semibold text-gray-900">{title}</h3>
       <p className="text-gray-600 text-sm md:text-base">{text}</p>
     </motion.div>

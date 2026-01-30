@@ -191,7 +191,7 @@ export default function Career() {
                  <p className='text-3xl text-center md:text-7xl text-gray-800 py-50'>Come <span className='text-3xl md:text-6xl font-bold text-gray-900'>build</span> with us</p>
              <p className='text-gray-600 tracking-tight text-center -mt-45 text-base md:text-lg'>Corestream is home to the best minds in tech. Our people are smart,</p>
              <p className='text-gray-600 text-center tracking-tight text-base md:text-lg'> creative, forward-thinking, and fun.</p>
-                <button className='wave-btn w-full md:w-50 h-13 mt-8 rounded-xl text- font-semibold  px-3 md:mx-145 border-2  border-gray-400'><span>View Open Roles</span></button>
+                <button className='wave-btn w-full md:w-50 h-13 mt-8 rounded-xl text- font-semibold  px-3 md:mx-160 border-2  border-gray-400'><span>View Open Roles</span></button>
                 <style>
 {`
 .wave-btn {
