@@ -10,7 +10,6 @@ import Sojourne from '../assets/images/sojourne.jpg'
 
 export default function Section4 () {
 
-  // ✅ STATE
   const [activeItem, setActiveItem] = useState(null)
 
   // ✅ DATA (image + comment)

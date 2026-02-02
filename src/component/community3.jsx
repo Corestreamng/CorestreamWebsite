@@ -1,5 +1,6 @@
 import React from 'react'
 import Our from '../assets/images/our.webp'
+import Nor from '../assets/images/nor.jpg'
 
 export default function Community3() {
   return (

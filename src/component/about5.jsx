@@ -25,8 +25,6 @@ export default function About5 () {
             <h2 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-800 px-12 py-14 font-bold mb-4'>Build Custom Software</h2>
             <p className='text-base md:text-lg -mt-12 px-12 text-gray-600 '>We partner with businesses to build their custom web applications, mobile apps, or enterprise-grade software tailored to their unique business needs.</p>
             </div>
-                 
-
         </div>
     </div>
     

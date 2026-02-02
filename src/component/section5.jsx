@@ -122,7 +122,7 @@ export default function Section5 () {
 
                 </div>
 
-                 {/* first grid */}
+                
                 <div className='h-full mb-14'>
                     <div className='w-15 h-15 rounded-xl  bg-teal-500/20 backdrop-blur-2xl   ml-4 flex items-center justify-center mt-4'>
                  <div className='absolute  rounded-full blur-3x -z-10'>

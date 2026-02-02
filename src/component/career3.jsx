@@ -5,6 +5,7 @@ import Vp from '../assets/images/vp.jpeg'
 import Sham from '../assets/images/sham.jpeg'
 import Sit from '../assets/images/sit.jpeg'
 import Room from '../assets/images/room.jpeg'
+import Voa from '../assets/images/voa.png'
 
 export default function Career3() {
   return (
@@ -39,7 +40,7 @@ export default function Career3() {
 
       <div className="w-full sm:w-64 md:w-72 aspect-[3/4] sm:mt-6 md:mt-10 rounded-2xl overflow-hidden">
         <img
-          src={Tobi}
+          src={Voa}
           alt=""
           className="h-full w-full object-cover"
         />

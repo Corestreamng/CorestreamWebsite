@@ -5,6 +5,7 @@ import Mae from '../assets/images/mae.webp'
 import White from '../component/white'
 
 
+
 export default function Career() {
   const pageVariants = {
     hidden: { opacity: 0 },

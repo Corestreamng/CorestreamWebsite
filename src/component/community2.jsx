@@ -1,5 +1,8 @@
 import React from 'react'
 import Our from '../assets/images/our.webp'
+import Det from '../assets/images/det.jpeg'
+import Voa from '../assets/images/voa.png'
+import Deb from '../assets/images/deb.jpeg'
 
 export default function Community2 () 
 {
@@ -15,7 +18,7 @@ export default function Community2 ()
         </div>
         <div className='w-full h-auto flex flex-cols px-4 gap-4'>
           <div className='w-80 h-[400px] rounded-3xl mb-4 mt-2'>
-            <img src={Our} alt="" className='rounded-3xl h-full object-cover '/>
+            <img src={Deb} alt="" className='rounded-3xl h-full object-cover '/>
           </div>
 
           <div className='w-100 h-[600px] rounded-3xl mb-4 -mt-30'>

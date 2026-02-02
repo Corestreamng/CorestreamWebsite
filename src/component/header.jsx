@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 w-full md:hidden z-50 bg-white shadow-md px-4 py-3">
+      <div className="fixed top-0 left-0 right-0 w-full md:hidden z-50 bg-white/5 shadow-md px-4 py-3">
         <div className="flex justify-between items-center">
 
           <Link to="/">
@@ -46,7 +46,7 @@ export default function Header() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="size-8"
+                className="size-9 text-white"
               >
                 <path
                   strokeLinecap="round"
@@ -59,7 +59,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* MOBILE MENU */}
+    
       {show && (
         <div className="fixed inset-0 z-40 bg-white pt-24 md:hidden overflow-y-auto">
           <div className="flex flex-col space-y-8 mx-6 text-lg pb-10">
@@ -74,10 +74,9 @@ export default function Header() {
         </div>
       )}
 
-      {/* DESKTOP HEADER */}
       <header
         className={`hidden md:block fixed w-full z-40 transition ${
-          scrolled ? "bg-white/90 shadow-sm" : "bg-transparent"
+          scrolled ? "bg-white/5 shadow-sm" : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
