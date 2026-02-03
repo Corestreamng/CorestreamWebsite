@@ -7,10 +7,11 @@ import Ens4 from '../assets/images/ens4.webp';
 import Sojorne from '../assets/images/sojorne.webp';
 import Presmit from '../assets/images/presmit.webp';
 import Loap from '../assets/images/loap.svg'
+import Doc from '../assets/images/doc.png' 
 
 export default function Section6() {
    const cards = [
-    { image: Ens, images: Loap, title: "Project One", description: "Short description 1" },
+    { image: Doc, images: Loap, title: "Project One", description: "Short description 1" },
     { image: Ens2, title: "Project Two", description: "Short description 2" },
     { image: Ens3, title: "Project Three", description: "Short description 3" },
     { image: Ens4, title: "Project Four", description: "Short description 4" },
@@ -36,7 +37,7 @@ export default function Section6() {
       {/* Horizontal Scroll Cards */}
       <div className="w-full mt-16">
         <div className="flex space-x-6 overflow-x-auto px-4 py-6 scrollbar-hide snap-x snap-mandatory">
-          {cards.map((cards, i) => (
+          {cards.map((cards, i) => ( 
             <div className='h-auto'>
             <div
               key={i}
@@ -58,7 +59,7 @@ export default function Section6() {
               <div className='w-full h-40 mt-4'>
                 <div className='flex flex-cols'>
                   <img src={Loap} alt="" className='mx-6 mt-4'/>
-                  <h2 className='py-6 text-xl md:text-4xl -ml-4'>Seedfi</h2>
+                  <h2 className='py-6 text-xl md:text-4xl -ml-4'>Wecare</h2>
                 </div>
                 <div className='flex flex-col'>
                   <p className='text-2xl font-light text-gray-500 mx-12'>A digital lending for individuals and small business owners</p>

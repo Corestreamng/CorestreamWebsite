@@ -15,9 +15,6 @@ export default function Section2  () {
           backgroundPosition: '0 0'
         }}
       />
-
-
-
       
       <div className="relative z-10 h-full ">
         <div className='grid grid-cols-1 md:grid-cols-2'>
