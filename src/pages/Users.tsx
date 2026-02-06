@@ -254,13 +254,13 @@ const Users: React.FC = () => {
                 })}
               </span>
               <div className="flex items-center gap-1">
-                <button className="inline-flex items-center gap-1 px-3 py-1.5 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors text-xs font-medium">
+                <button className="inline-flex items-center gap-1 px-3 py-1.5 bg-green-700 text-white hover:bg-green-800 rounded-lg transition-colors text-xs font-medium">
                   <MdVisibility />
                 </button>
-                <button className="inline-flex items-center gap-1 px-3 py-1.5 text-orange-600 hover:bg-orange-50 rounded-lg transition-colors text-xs font-medium">
+                <button className="inline-flex items-center gap-1 px-3 py-1.5 bg-green-700 text-white hover:bg-green-800 rounded-lg transition-colors text-xs font-medium">
                   <MdLock />
                 </button>
-                <button className="inline-flex items-center gap-1 px-3 py-1.5 text-red-600 hover:bg-red-50 rounded-lg transition-colors text-xs font-medium">
+                <button className="inline-flex items-center gap-1 px-3 py-1.5 bg-red-600 text-white hover:bg-red-700 rounded-lg transition-colors text-xs font-medium">
                   <MdBlock />
                 </button>
               </div>

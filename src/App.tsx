@@ -6,6 +6,9 @@ import AddPost from "./pages/AddPost";
 import EditPost from "./pages/EditPost";
 import ViewPost from "./pages/ViewPost";
 import Articles from "./pages/Articles";
+import AddArticle from "./pages/AddArticle";
+import EditArticle from "./pages/EditArticle";
+import ViewArticle from "./pages/ViewArticle";
 import Blog from "./pages/Blog";
 import Users from "./pages/Users";
 import Community from "./pages/Community";
@@ -24,6 +27,9 @@ function App() {
           <Route path="/posts/view/:id" element={<ViewPost />} />
           <Route path="/posts/edit/:id" element={<EditPost />} />
           <Route path="/articles" element={<Articles />} />
+          <Route path="/articles/add" element={<AddArticle />} />
+          <Route path="/articles/view/:id" element={<ViewArticle />} />
+          <Route path="/articles/edit/:id" element={<EditArticle />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/users" element={<Users />} />
           <Route path="/community" element={<Community />} />

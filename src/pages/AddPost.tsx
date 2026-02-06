@@ -139,7 +139,7 @@ const AddPost: React.FC = () => {
         <div>
           <button
             onClick={() => navigate("/posts")}
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-2 text-sm"
+            className="inline-flex items-center gap-2  text-white bg-green-600 hover:bg-white hover:text-green-500 mb-2 text-sm outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-300 rounded-lg px-3 py-2"
           >
             <MdArrowBack /> Back to Posts
           </button>
@@ -185,38 +185,38 @@ const AddPost: React.FC = () => {
                 <div className="flex items-center gap-2 flex-wrap">
                   <button
                     type="button"
-                    className="p-2 hover:bg-gray-200 rounded-lg transition-colors"
+                    className="p-2 bg-green-600 hover:bg-white text-white rounded-lg "
                     title="Bold"
                   >
-                    <MdFormatBold className="text-xl text-gray-700" />
+                    <MdFormatBold className="text-xl text-white hover:text-green-600  focus:border-transparent" />
                   </button>
                   <button
                     type="button"
-                    className="p-2 hover:bg-gray-200 rounded-lg transition-colors"
+                    className="p-2  bg-green-600 hover:bg-white text-white rounded-lg"
                     title="Italic"
                   >
                     <MdFormatItalic className="text-xl text-gray-700" />
                   </button>
                   <button
                     type="button"
-                    className="p-2 hover:bg-gray-200 rounded-lg transition-colors"
+                    className="p-2 bg-green-600 hover:bg-white text-white rounded-lg"
                     title="Bullet List"
                   >
-                    <MdFormatListBulleted className="text-xl text-gray-700" />
+                    <MdFormatListBulleted className="text-xl text-white hover:text-green-600  focus:border-transparent" />
                   </button>
                   <button
                     type="button"
-                    className="p-2 hover:bg-gray-200 rounded-lg transition-colors"
+                    className="p-2 bg-green-600 hover:bg-white text-white rounded-lg"
                     title="Insert Link"
                   >
-                    <MdLink className="text-xl text-gray-700" />
+                    <MdLink className="text-xl text-white hover:text-green-600" />
                   </button>
                   <button
                     type="button"
-                    className="p-2 hover:bg-gray-200 rounded-lg transition-colors"
+                    className="p-2 bg-green-600 hover:bg-white text-white rounded-lg transition-colors"
                     title="Insert Image"
                   >
-                    <MdImage className="text-xl text-gray-700" />
+                    <MdImage className="text-xl text-white hover:text-green-600  focus:border-transparent" />
                   </button>
                 </div>
               </div>

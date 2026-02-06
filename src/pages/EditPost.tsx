@@ -73,7 +73,7 @@ const EditPost: React.FC = () => {
       <div className="flex items-center gap-3">
         <button
           onClick={() => navigate("/posts")}
-          className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-2 text-sm"
+          className="inline-flex items-center gap-2 text-white bg-green-600  mb-2 text-sm"
         >
           <MdArrowBack /> Back to Posts
         </button>

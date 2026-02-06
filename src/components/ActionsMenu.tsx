@@ -55,8 +55,10 @@ const ActionsMenu: React.FC<Props> = ({ actions, ariaLabel = "Actions" }) => {
                   setOpen(false);
                 }}
                 role="menuitem"
-                className={`w-full flex items-center gap-2 px-3 py-2 text-sm text-left hover:bg-gray-50 ${
-                  a.destructive ? "text-red-600" : "text-gray-700"
+                className={`w-full flex items-center gap-2 px-3 py-2 text-sm text-left transition-colors ${
+                  a.destructive
+                    ? "text-red-600 hover:bg-red-600 hover:text-white"
+                    : "text-gray-700 hover:bg-green-700 hover:text-white"
                 }`}
               >
                 {a.icon && <span className="w-4 h-4">{a.icon}</span>}
