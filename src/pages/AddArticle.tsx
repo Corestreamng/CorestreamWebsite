@@ -93,9 +93,9 @@ const AddArticle: React.FC = () => {
       <div className="flex items-center gap-4">
         <button
           onClick={() => navigate("/articles")}
-          className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+          className="p-2 hover:bg-green-500 bg-green-600 rounded-lg transition-colors border-none"
         >
-          <MdArrowBack className="text-2xl text-gray-600" />
+          <MdArrowBack className="text-2xl text-white" />
         </button>
         <div>
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
@@ -214,7 +214,7 @@ const AddArticle: React.FC = () => {
           <button
             type="button"
             onClick={() => navigate("/articles")}
-            className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors"
+            className="px-6 py-3  border-none text-white rounded-lg font-medium hover:bg-red-500 bg-red-600 transition-colors"
           >
             Cancel
           </button>

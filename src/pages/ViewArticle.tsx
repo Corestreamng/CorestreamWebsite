@@ -88,9 +88,9 @@ const ViewArticle: React.FC = () => {
         <div className="flex items-center gap-4">
           <button
             onClick={() => navigate("/articles")}
-            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+            className="p-2 hover:bg-green-500 bg-green-600 rounded-lg transition-colors border-none"
           >
-            <MdArrowBack className="text-2xl text-gray-600" />
+            <MdArrowBack className="text-2xl text-white" />
           </button>
           <div>
             <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
@@ -123,14 +123,14 @@ const ViewArticle: React.FC = () => {
         <div className="flex gap-2">
           <button
             onClick={handleEdit}
-            className="inline-flex items-center gap-2 px-4 py-2 text-green-600 hover:bg-green-50 rounded-lg transition-colors font-medium border border-green-200"
+            className="inline-flex items-center gap-2 px-4 py-2 text-white bg-green-600 rounded-lg transition-colors font-medium border-none "
           >
             <MdEdit className="text-lg" />
             <span className="hidden sm:inline">Edit</span>
           </button>
           <button
             onClick={handleDelete}
-            className="inline-flex items-center gap-2 px-4 py-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors font-medium border border-red-200"
+            className="inline-flex items-center gap-2 px-4 py-2 text-white hover:bg-red-700 bg-red-600 rounded-lg transition-colors font-medium border-none"
           >
             <MdDelete className="text-lg" />
             <span className="hidden sm:inline">Delete</span>
