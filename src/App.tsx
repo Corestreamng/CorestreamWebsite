@@ -10,6 +10,9 @@ import AddArticle from "./pages/AddArticle";
 import EditArticle from "./pages/EditArticle";
 import ViewArticle from "./pages/ViewArticle";
 import Blog from "./pages/Blog";
+import Addblog from "./pages/Addblog";
+import Editblog from "./pages/Editblog";
+import Viewblog from "./pages/Viewblog";
 import Users from "./pages/Users";
 import Community from "./pages/Community";
 import Analytics from "./pages/Analytics";
@@ -31,6 +34,9 @@ function App() {
           <Route path="/articles/view/:id" element={<ViewArticle />} />
           <Route path="/articles/edit/:id" element={<EditArticle />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/add" element={<Addblog />} />
+          <Route path="/blog/view/:id" element={<Viewblog />} />
+          <Route path="/blog/edit/:id" element={<Editblog />} />
           <Route path="/users" element={<Users />} />
           <Route path="/community" element={<Community />} />
           <Route path="/analytics" element={<Analytics />} />

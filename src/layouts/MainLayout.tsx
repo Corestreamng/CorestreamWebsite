@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
+import { Toaster } from "sonner";
 
 const MainLayout: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -25,6 +26,8 @@ const MainLayout: React.FC = () => {
             <Outlet />
           </div>
         </main>
+
+        <Toaster />
 
         {/* Footer */}
         {/* <footer className="border-t border-gray-200 bg-white px-4 sm:px-6 lg:px-8 py-4">
