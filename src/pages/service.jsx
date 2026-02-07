@@ -58,8 +58,7 @@ export default function Service() {
     <div>
       <Header />
       <div className="bg-gray-50 h-screen flex items-center justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-7xl px-14 gap-8">
-
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-7xl px-10 gap-8">
           {/* LEFT HERO */}
           <motion.div 
             className="flex flex-col justify-center max-w-md text-gray-900 space-y-6"

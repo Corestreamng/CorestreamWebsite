@@ -8,11 +8,12 @@ import Sojorne from '../assets/images/sojorne.webp';
 import Presmit from '../assets/images/presmit.webp';
 import Loap from '../assets/images/loap.svg'
 import Doc from '../assets/images/doc.png' 
+import Core from '../assets/images/core.png'
 
 export default function Section6() {
    const cards = [
-    { image: Doc, images: Loap, title: "Project One", description: "Short description 1" },
-    { image: Ens2, title: "Project Two", description: "Short description 2" },
+    { image: Doc, images: Loap, title: "Wecare", description: "Experience Seamless Telemedicine for Faster, Smarter Healthcare" },
+    { image: Core, title: "Coreskool", description: "Smart School Management Made Simple for Better Learning Outcomes" },
     { image: Ens3, title: "Project Three", description: "Short description 3" },
     { image: Ens4, title: "Project Four", description: "Short description 4" },
     { image: Sojorne, title: "Project Five", description: "Short description 5" },
@@ -58,11 +59,11 @@ export default function Section6() {
               </div>
               <div className='w-full h-40 mt-4'>
                 <div className='flex flex-cols'>
-                  <img src={Loap} alt="" className='mx-6 mt-4'/>
-                  <h2 className='py-6 text-xl md:text-4xl -ml-4'>Wecare</h2>
+                  <img src={cards.images} alt="" className='mx-6 mt-4'/>
+                  <h2 className='py-6 text-xl md:text-4xl -ml-4'>{cards.title}</h2>
                 </div>
                 <div className='flex flex-col'>
-                  <p className='text-2xl font-light text-gray-500 mx-12'>A digital lending for individuals and small business owners</p>
+                  <p className='text-2xl font-light text-gray-500 mx-12'>{cards.description}</p>
                     <div className='mt-4 mx-11'>
                         <button className='w-50 h-12 border-2 text-gray-500 border-gray-600 rounded-xl text-base font-semibold text-center'>View case study</button>
                     </div>

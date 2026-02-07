@@ -5,8 +5,20 @@ import Cam from '../assets/images/cam.svg'
 import Careclick from '../assets/images/careclick.svg'
 import Nibss from '../assets/images/nibss.svg'
 import Whispa from '../assets/images/whispa.svg'
+import Bra from '../assets/images/bra.png'
+import Bra1 from '../assets/images/bra1.png'
+import Bra3 from '../assets/images/bra3.png'
+import Bra4 from '../assets/images/bra4.png'
+import Bra5 from '../assets/images/bra5.png'
+import Bra6 from '../assets/images/bra6.png'
+import Bra7 from '../assets/images/bra7.png'
+import Bra8 from '../assets/images/bra8.png'
+import Bra9 from '../assets/images/bra9.png'
+import Bra2 from '../assets/images/bra2.png'
 
-const logos = [Jollof, Kafene, Cam, Careclick, Nibss, Whispa]
+
+
+const logos = [Bra, Bra1, Bra2, Bra3, Bra4, Bra5, Bra6, Bra7, Bra8, Bra9]
 
 export default function Section3 () {
   return (

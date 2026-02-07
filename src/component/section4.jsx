@@ -41,7 +41,7 @@ export default function Section4 () {
             <img alt="" onClick={() => setActiveItem(items[4])} className='absolute w-60 h-60 rounded-full border-4 border-gray-200 mt-30 cursor-pointer'/>
             <div className='w-30 h-120 bg-white z-[900] -ml-24'></div>
           </div>
-          <div className='w-full h-full flex flex-col items-center'>
+          <div className='w-full h-full flex flex-cols gap-12 items-center'>
             <svg
               width="200"
               height="720"
@@ -66,7 +66,7 @@ export default function Section4 () {
               <circle cx="100" cy="480" r="7" stroke="#9CA3AF" strokeWidth="2" fill="white" />
             </svg>
 
-            <div className=" max-w-md text-base md:text-3xl text-center text-gray-700">
+            <div className=" max-w-md text-base md:text-3xl h-full w-full px-3 text-center text-gray-700">
               {activeItem ? activeItem.comment : 'Comments'}
             </div>
 

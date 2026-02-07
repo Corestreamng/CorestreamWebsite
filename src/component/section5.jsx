@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 
 export default function Section5 () {
 
@@ -21,7 +22,7 @@ export default function Section5 () {
                        <h5 className='text-2xl px-4 py-7 font-semibold text-white'>Design</h5>
                        <p className='px-4 -mt-2 text-gray-500 font-semibold'>We combine creativity and strategy through branding,web design and UI/UX, to create design that passyour message effectively and elevate your brand visual impression </p>                       
                     </div>
-                     <button className='px-4 mt-4 text-teal-500'>Learn more</button>
+                     <Link to="/services" className='px-4 mt-4 text-teal-500'>Learn more</Link>
 
                 </div>
 
@@ -37,7 +38,7 @@ export default function Section5 () {
                        <h5 className='text-2xl px-4 py-7 font-semibold text-white'>Product</h5>
                        <p className='px-4 -mt-2 text-gray-500 font-semibold'>We take your product idea and turn it into reality, handling everything from design and engineering to testing and launch. We give attention to all processes involved in building a great product</p>                       
                     </div>
-                     <button className='px-4 mt-4 text-teal-500'>Learn more</button>
+                     <Link to="/services" className='px-4 mt-4 text-teal-500'>Learn more</Link>
 
                 </div>
 
@@ -53,7 +54,7 @@ export default function Section5 () {
                        <h5 className='text-2xl px-4 py-7 font-semibold text-white'>Web Development</h5>
                        <p className='px-4 -mt-2 text-gray-500 font-semibold'>We create custom websites and web applications that fit your business needs. Our team uses the latest technology to make your site look good and work perfectly on any device.</p>                       
                     </div>
-                     <button className='px-4 mt-4 text-teal-500'>Learn more</button>
+                     <Link to="/services" className='px-4 mt-4 text-teal-500'>Learn more</Link>
 
                 </div>
 
@@ -69,7 +70,7 @@ export default function Section5 () {
                        <h5 className='text-2xl px-4 py-7 font-semibold text-white'>Mobile Development</h5>
                        <p className='px-4 -mt-2 text-gray-500 font-semibold'>We design and build high-performing mobile apps for iOS & Android, designed to seamlessly meet your needs and delight your users using the latest technology available.</p>                       
                     </div>
-                     <button className='px-4 mt-4 text-teal-500'>Learn more</button>
+                     <Link to="/services" className='px-4 mt-4 text-teal-500'>Learn more</Link>
                 </div>
             </div>
 
@@ -86,7 +87,7 @@ export default function Section5 () {
                        <h5 className='text-2xl px-4 py-7 font-semibold text-white'>AI & Machine Learning</h5>
                        <p className='px-4 -mt-2 text-gray-500 font-semibold'>We build using the latest AI and machine learning technology to create powerful tools for businesses. Our custom solutions makes our processes smarter and help you make better decisions. </p>                       
                     </div>
-                     <button className='px-4 mt-4 text-teal-500'>Learn more</button>
+                     <Link to="/services" className='px-4 mt-4 text-teal-500'>Learn more</Link>
 
                 </div>
 
@@ -102,7 +103,7 @@ export default function Section5 () {
                        <h5 className='text-2xl px-4 py-7 font-semibold text-white'>Team Optimization</h5>
                        <p className='px-4 -mt-2 text-gray-500 font-semibold'>Our focus is on helping your team perform at its best. We provide solutions and strategies to improve collaboration, boost productivity, and streamline workflows </p>                       
                     </div>
-                     <button className='px-4 mt-4 text-teal-500'>Learn more</button>
+                     <Link to="/service" className='px-4 py-7 text-teal-500'>Learn more</Link>
 
                 </div>
 
@@ -118,7 +119,7 @@ export default function Section5 () {
                        <h5 className='text-2xl px-4 py-7 font-semibold text-white'>CTO-as-a-service</h5>
                        <p className='px-4 -mt-2 text-gray-500 font-semibold'>Empower your business for long-term success with our on-demand CTOs. With our experienced CTOs you and your team gets expert guidance, strategy and implementation support</p>                       
                     </div>
-                     <button className='px-4 mt-4 text-teal-500'>Learn more</button>
+                     <Link to="/services" className='px-4 mt-4 text-teal-500'>Learn more</Link>
 
                 </div>
 
@@ -134,7 +135,7 @@ export default function Section5 () {
                        <h5 className='text-2xl px-4 py-7 font-semibold text-white'>DevSecOps & Engineering</h5>
                        <p className='px-4 -mt-2 text-gray-500 font-semibold'>We deliver secure, scalable software faster. Our DevSecOps, SRE, and Platform Engineering expertise ensures rapid development, reliable performance, and worry-free deployments</p>                       
                     </div>
-                     <button className='px-4 mt-4 text-teal-500'>Learn more</button>
+                     <Link to="/services" className='px-4 mt-4 text-teal-500'>Learn more</Link>
 
                 </div>
 

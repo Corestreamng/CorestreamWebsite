@@ -2,9 +2,21 @@ import React from 'react'
 import Bulb from '../assets/images/bulb.webp'
 import Arrow from '../assets/images/arrow.svg'
 import Dev from '../assets/images/dev.webp'
+import { Link } from "react-router-dom";
+import { useState, useEffect } from 'react';
 
 
 export default function Section2  () {
+
+  const images = [Bulb, Dev];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 15000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className=" h-auto w-full md:h-345 relative bg-white overflow-hidden border-b border-dashed border-gray-400 pb-2">
       <div 
@@ -60,16 +72,15 @@ export default function Section2  () {
                       <div className='px-10 -mt-2'><p className='mt-6 tracking-tight text-gray-600'>We monitor your products performance after launch, pproviding free support, and ensure stability. This includes bugs fixes, beta testing, and documentation</p></div>
                     </div>
 
-                    <div className='mx-10 mt-6 md:-mt-6'>
-                      <button className='w-25 text-sm mt-6 md:w-40 h-14 rounded-xl bg-gray-300 font-semibold text-gray-800 mb-6'>Start Building</button>
-                    </div>
+                    
+                      <Link to="/contact" className='w-25 text-sm mt-6 md:w-40 h-14 rounded-xl bg-gray-300 font-semibold text-center py-3 md:text-lg text-gray-800  hover:scale-95 transition-transform duration-300'>Start Building</Link>
 
                 </div>
             </div>
             <div className='hidden md:block '>
-                <div className='flex justify-center items-center mt-5 flex-col'>
-                    <img src={Bulb} alt="" className='w-120 ml-20'/>
-                     <img src={Arrow} alt="" className='w-150 -mt-12 -ml-70'/>
+                <div className='flex justify-center items-center mt-5 flex-col gap-4'>
+                    <img src={images[currentIndex]} alt="" className='w-120 ml-20 transition-opacity duration-500'/>
+                    <img src={Arrow} alt="" className='w-120 -ml-40'/>
                 </div>
 
             </div>
