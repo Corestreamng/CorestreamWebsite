@@ -13,7 +13,7 @@ export default function Service() {
   ];
 
   const rightCards = [
-    { color: "red", title: "AI & Machine Learning", text: "We build using the latest AI and ML technology to create powerful tools for businesses. Our custom solutions make processes smarter and help you make better decisions.", svg:<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9 text-teal-600"> <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3" /></svg> },
+    { color: "red", title: "AI & Machine Learning", text: "We build using the latest AI and ML technology to create powerful tools for businesses. Our custom solutions make processes smarter and help you make better decisions.", svg: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-9 text-teal-600"> <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3" /></svg> },
     { color: "indigo", title: "CTO-as-a-service", text: "Empower your business with on-demand CTOs. Receive expert guidance, strategy, and implementation support for your team." },
     { color: "teal", title: "Team Optimization", text: "We help your team perform at its best with solutions to improve collaboration, productivity, and workflows." },
     { color: "pink", title: "DevSecOps & Engineering", text: "We deliver secure, scalable software faster. Our DevSecOps, SRE, and Platform Engineering expertise ensures rapid development, reliable performance, and worry-free deployments" },
@@ -67,7 +67,7 @@ export default function Service() {
             animate="visible"
           >
             <motion.h1 
-              className="text-4xl md:text-7xl md:px-2 text-gray-900"
+              className="text-4xl md:text-7xl md:px-2 text-gray-800"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
@@ -75,7 +75,7 @@ export default function Service() {
               Our Software development 
             </motion.h1>
             <motion.h1 
-              className="text-4xl md:text-7xl md:px-2 font-semibold -mt-4 text-gray-950"
+              className="text-4xl md:text-7xl md:px-3  font-semibold -mt-3 text-green-800"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -83,7 +83,7 @@ export default function Service() {
               Service
             </motion.h1>
             <motion.p 
-              className="text-gray-600 text-xl px-2"
+              className="text-gray-600 text-lg px-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}

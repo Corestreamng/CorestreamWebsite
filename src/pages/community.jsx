@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Pik2 from'../assets/images/pik2.png'
+import Pik2 from '../assets/images/pik2.png'
 import Header from '../component/header'
 import Content from '../assets/images/contents.webp'
 import Gp2 from  '../assets/images/gp2.png'
@@ -27,7 +27,7 @@ export default function Community () {
     <>
     <div className='h-auto md:min-h-screen bg-gray-100'>
 <Header/>
-    <div
+    <motion.div
   className='text-center mx-auto min-h-screen lg:h-[85vh] w-[80%] bg-no-repeat bg-contain lg:bg-[length:100%_650px] '
   style={{
     backgroundImage: `url(${Pik2})`,
@@ -35,18 +35,21 @@ export default function Community () {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
   }}
+  variants={containerVariants}
+  initial="hidden"
+  animate="visible"
 >
   <div className="absolute inset-0 mt-50"> 
      <motion.h2 
-       className='text-6xl font-semibold'
+       className='text-6xl text-gray-700 font-semibold'
        variants={itemVariants}
        initial="hidden"
        animate="visible"
      >
-       The Enyata Community
+       The Corestream Community
      </motion.h2>
     <motion.p 
-      className='tracking-tighter py-7 text-2xl text-gray-600'
+      className='tracking-tighter py-7 text-xl text-gray-600'
       variants={itemVariants}
       initial="hidden"
       animate="visible"
@@ -113,7 +116,7 @@ export default function Community () {
 }
 `}</style>
   </div>
-</div>
+</motion.div>
 
       <div className='hidden md:block w-200  float-right -mt-100 inset-0 '>
         <motion.img 

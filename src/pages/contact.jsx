@@ -38,19 +38,19 @@ export default function Contact () {
         >
          <Tech2/>
          <motion.div 
-           className='flex flex-col mt-110 md:mt-55'
+           className='flex flex-col mt-70 md:mt-55'
            variants={containerVariants}
            initial="hidden"
            animate="visible"
          >
             <motion.p 
-              className='text-3xl px-12 md:text-7xl text-white md:px-16'
+              className='text-2xl px-12 md:text-7xl text-white md:px-12'
               variants={itemVariants}
             >
               There's no limit to what  
             </motion.p>
              <motion.p 
-               className='text-3xl text-center md:text-7xl text-white'
+               className='text-2xl text-center md:text-7xl text-white'
                variants={itemVariants}
              >
                you can <motion.span 
@@ -61,7 +61,7 @@ export default function Contact () {
                </motion.span> 
              </motion.p>
              <motion.p 
-               className='text-base md:text-lg text-gray-200 text-center py-10'
+              className='text-sm md:text-gray-200 text-center py-6'
                variants={itemVariants}
              >
                Do you have an idea or solution? Let's work together to <br/> build it into technology
