@@ -5,7 +5,6 @@ import {
   MdClose,
   MdArrowBack,
   MdPerson,
-  MdImage,
 } from "react-icons/md";
 
 interface UserFormData {

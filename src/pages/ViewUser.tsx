@@ -8,7 +8,6 @@ import {
   MdBlock,
   MdCheckCircle,
   MdEmail,
-  MdPerson,
   MdCalendarToday,
   MdAccessTime,
 } from "react-icons/md";
