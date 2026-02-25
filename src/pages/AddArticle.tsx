@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { MdArrowBack, MdSave } from "react-icons/md";
+import { supabase } from "../lib/supabase";
 
 interface ArticleFormData {
   title: string;
@@ -18,6 +19,7 @@ const AddArticle: React.FC = () => {
     status: "Draft",
   });
   const [errors, setErrors] = useState<Partial<ArticleFormData>>({});
+  const [saving, setSaving] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -25,65 +27,43 @@ const AddArticle: React.FC = () => {
     >,
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-    // Clear error when user starts typing
+    setFormData((prev) => ({ ...prev, [name]: value }));
     if (errors[name as keyof ArticleFormData]) {
-      setErrors((prev) => ({
-        ...prev,
-        [name]: "",
-      }));
+      setErrors((prev) => ({ ...prev, [name]: "" }));
     }
   };
 
   const validate = (): boolean => {
     const newErrors: Partial<ArticleFormData> = {};
-
-    if (!formData.title.trim()) {
-      newErrors.title = "Title is required";
-    }
-    if (!formData.seoTitle.trim()) {
-      newErrors.seoTitle = "SEO Title is required";
-    }
-    if (!formData.content.trim()) {
-      newErrors.content = "Content is required";
-    }
-
+    if (!formData.title.trim()) newErrors.title = "Title is required";
+    if (!formData.seoTitle.trim()) newErrors.seoTitle = "SEO Title is required";
+    if (!formData.content.trim()) newErrors.content = "Content is required";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!validate()) return;
 
-    if (!validate()) {
+    setSaving(true);
+    const { error } = await supabase.from("articles").insert([
+      {
+        title: formData.title,
+        seo_title: formData.seoTitle,
+        content: formData.content,
+        status: formData.status,
+        views: 0,
+      },
+    ]);
+    setSaving(false);
+
+    if (error) {
+      console.error("Supabase insert error", error);
+      alert("Failed to save article");
       return;
     }
 
-    // Create new article object
-    const newArticle = {
-      id: Date.now(), // Simple ID generation
-      title: formData.title,
-      seoTitle: formData.seoTitle,
-      content: formData.content,
-      status: formData.status,
-      date: new Date().toISOString().split("T")[0],
-      views: 0,
-    };
-
-    // In a real app, you would send this to an API
-    console.log("New article:", newArticle);
-
-    // For now, we'll store it in localStorage
-    const existingArticles = JSON.parse(
-      localStorage.getItem("articles") || "[]",
-    );
-    existingArticles.push(newArticle);
-    localStorage.setItem("articles", JSON.stringify(existingArticles));
-
-    // Navigate back to articles list
     navigate("/articles");
   };
 
@@ -124,9 +104,7 @@ const AddArticle: React.FC = () => {
               name="title"
               value={formData.title}
               onChange={handleChange}
-              className={`w-full px-4 py-3 border ${
-                errors.title ? "border-red-500" : "border-gray-300"
-              } rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent`}
+              className={`w-full px-4 py-3 border ${errors.title ? "border-red-500" : "border-gray-300"} rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent`}
               placeholder="Enter article title"
             />
             {errors.title && (
@@ -148,9 +126,7 @@ const AddArticle: React.FC = () => {
               name="seoTitle"
               value={formData.seoTitle}
               onChange={handleChange}
-              className={`w-full px-4 py-3 border ${
-                errors.seoTitle ? "border-red-500" : "border-gray-300"
-              } rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent`}
+              className={`w-full px-4 py-3 border ${errors.seoTitle ? "border-red-500" : "border-gray-300"} rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent`}
               placeholder="Enter SEO-friendly title"
             />
             {errors.seoTitle && (
@@ -175,9 +151,7 @@ const AddArticle: React.FC = () => {
               value={formData.content}
               onChange={handleChange}
               rows={12}
-              className={`w-full px-4 py-3 border ${
-                errors.content ? "border-red-500" : "border-gray-300"
-              } rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none`}
+              className={`w-full px-4 py-3 border ${errors.content ? "border-red-500" : "border-gray-300"} rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none`}
               placeholder="Write your article content here..."
             />
             {errors.content && (
@@ -214,16 +188,17 @@ const AddArticle: React.FC = () => {
           <button
             type="button"
             onClick={() => navigate("/articles")}
-            className="px-6 py-3  border-none text-white rounded-lg font-medium hover:bg-red-500 bg-red-600 transition-colors"
+            className="px-6 py-3 border-none text-white rounded-lg font-medium hover:bg-red-500 bg-red-600 transition-colors"
           >
             Cancel
           </button>
           <button
             type="submit"
-            className="flex items-center justify-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors"
+            disabled={saving}
+            className="flex items-center justify-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors disabled:opacity-50"
           >
             <MdSave className="text-lg" />
-            <span>Save Article</span>
+            <span>{saving ? "Saving..." : "Save Article"}</span>
           </button>
         </div>
       </form>

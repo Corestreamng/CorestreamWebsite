@@ -8,6 +8,7 @@ import {
   MdFilterList,
   MdVisibility,
 } from "react-icons/md";
+import { supabase } from "../lib/supabaseClient";
 
 interface Article {
   id: number;
@@ -25,46 +26,15 @@ const Articles: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filterStatus, setFilterStatus] = useState("All Status");
 
-  // Load articles from localStorage on mount
+  // Load articles from Supabase on mount
   useEffect(() => {
-    const loadArticles = () => {
-      const articlesData = localStorage.getItem("articles");
-      if (articlesData) {
-        setArticles(JSON.parse(articlesData));
-      } else {
-        // Initialize with default articles if none exist
-        const defaultArticles = [
-          {
-            id: 1,
-            title: "Technical Documentation",
-            status: "Published" as const,
-            date: "2026-01-28",
-            views: 523,
-            seoTitle: "Technical Docs",
-            content: "Comprehensive technical documentation for developers.",
-          },
-          {
-            id: 2,
-            title: "Best Practices Guide",
-            status: "Published" as const,
-            date: "2026-01-25",
-            views: 412,
-            seoTitle: "Best Practices",
-            content: "Learn the best practices for modern web development.",
-          },
-          {
-            id: 3,
-            title: "API Reference Guide",
-            status: "Draft" as const,
-            date: "2026-01-20",
-            views: 0,
-            seoTitle: "API Reference",
-            content: "Complete API reference documentation.",
-          },
-        ];
-        localStorage.setItem("articles", JSON.stringify(defaultArticles));
-        setArticles(defaultArticles);
+    const loadArticles = async () => {
+      const { data, error } = await supabase.from("articles").select("*");
+      if (error) {
+        console.error("Error loading articles", error);
+        return;
       }
+      setArticles(data || []);
     };
 
     loadArticles();
@@ -92,15 +62,23 @@ const Articles: React.FC = () => {
     navigate(`/articles/view/${article.id}`);
   };
 
-  const handleDelete = (article: Article) => {
+  const handleDelete = async (article: Article) => {
     if (
       window.confirm(
         `Are you sure you want to delete "${article.title}"? This action cannot be undone.`,
       )
     ) {
+      // delete from Supabase
+      const { error } = await supabase
+        .from("articles")
+        .delete()
+        .eq("id", article.id);
+      if (error) {
+        console.error("Supabase delete error", error);
+      }
+
       const updatedArticles = articles.filter((a) => a.id !== article.id);
       setArticles(updatedArticles);
-      localStorage.setItem("articles", JSON.stringify(updatedArticles));
       console.log("Deleted article:", article);
     }
   };
