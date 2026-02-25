@@ -4,7 +4,9 @@ import { useState, useEffect } from 'react';
 import White from '../component/white';
 import Header from '../component/header';
 
-export default function About() {
+const texts = ["Product", "Engr", "Solutions"];
+
+export default function Client() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -25,7 +27,6 @@ export default function About() {
     },
   };
 
-      const texts = ["Product", "Engr", "Solutions"];
   const [currentIndex, setCurrentIndex] = useState(0);
 
       useEffect(() => {

@@ -16,7 +16,7 @@ export default function Client4 () {
         <div className='w-full md:max-w-4xl h-[500px] mt-16 mx-4 '>
             <div className='py-10 px-5 md:px-10 md:py-30'>
                 <h1 className='text-5xl md:text-6xl text-gray-800'>Your idea + our expertise = limitless possibilities.</h1>
-                <p className='text-md md:text-2xl py-6 text-gray-400'>Together, we'll turn your ideas into impactful <br /> solutions that drive success.</p>
+                <p className='text-md md:text-2xl py-6 text-gray-400'>Together, we&apos;ll turn your ideas into impactful <br /> solutions that drive success.</p>
                   <button className='w-full md:w-45 h-13 rounded-xl font-semibold border border-gray-600'>Share your Idea</button>
             </div>
 

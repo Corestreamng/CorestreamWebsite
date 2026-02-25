@@ -4,8 +4,9 @@ import { motion } from 'framer-motion';
 import White from '../component/white';
 import Header from '../component/header';
 
+const texts = ["Product", "Engineering", "Solutions"];
+
 export default function About() {
-  const texts = ["Product", "Engineering", "Solutions"];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -79,7 +80,7 @@ export default function About() {
             className="text-md text-center py-5 text-gray-600 max-w-xl mx-auto"
             variants={itemVariants}
           >
-            We help businesses of all sizes and industries to develop tailored software that's scalable, flexible, and designed to improve your business
+            We help businesses of all sizes and industries to develop tailored software that&apos;s scalable, flexible, and designed to improve your business
           </motion.p>
           <motion.button 
             className='wave-btn w-40 h-12 border-2 font-semibold text-gray-600 border-green-800 rounded-xl mb-6'

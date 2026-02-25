@@ -3,19 +3,9 @@ import { motion } from 'framer-motion';
 import Header from '../component/header'
 
 export default function Blog() {
-  const pageVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.3,
-      },
-    },
-  };
 
   return (
-    <motion.div className="relative w-full h-100 bg-gradient-to-br from-slate-50 to-blue-50 overflow-hidden" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
+    <motion.div className="relative w-full h-100 bg-linear-to-br from-slate-50 to-blue-50 overflow-hidden" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
       <Header/>
       <svg
         viewBox="0 0 1200 600"
@@ -186,7 +176,7 @@ export default function Blog() {
       </svg>
 
      
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/30 pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-white/30 pointer-events-none" />
       <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
             <div className='flex flex-cols gap-4'>
               <h1 className='text-3xl md:text-7xl '>Our </h1>

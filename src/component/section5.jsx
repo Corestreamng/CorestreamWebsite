@@ -14,7 +14,7 @@ export default function Section5 () {
                 <div className='h-full '>
                     <div className='w-15 h-15 rounded-xl  bg-teal-500/20 backdrop-blur-2xl   ml-4 flex items-center justify-center mt-4'>
                  <div className='absolute  rounded-full blur-3x -z-10'>
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-9 text-teal-600"> <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3" /></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-9 text-teal-600"> <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3" /></svg>
                  </div>
                     </div>
 
@@ -30,7 +30,7 @@ export default function Section5 () {
                 <div className='h-full '>
                     <div className='w-15 h-15 rounded-xl  bg-teal-500/20 backdrop-blur-2xl   ml-4 flex items-center justify-center mt-4'>
                  <div className='absolute  rounded-full blur-3x -z-10'>
-                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="size-9 text-teal-600"><path fill="currentColor" d="m22.509 12.689l-6-3.55a1 1 0 0 0-1.018.001l-6 3.55a1 1 0 0 0-.491.86v6.9c0 .354.187.681.491.86l6 3.55a.99.99 0 0 0 1.018 0l6-3.55a1 1 0 0 0 .491-.86v-6.9a1 1 0 0 0-.491-.861M21 19.88l-5 2.958l-5-2.958v-5.76l5-2.958l5 2.958z"/><path fill="currentColor" d="M6 20.184V11.07l6.2-3.664l-1.017-1.722l-6.692 3.955A1 1 0 0 0 4 10.5v9.684A3 3 0 0 0 2 23c0 1.654 1.346 3 3 3s3-1.346 3-3a3 3 0 0 0-2-2.816M5 24a1.001 1.001 0 0 1 0-2a1.001 1.001 0 0 1 0 2m22-4c-1.654 0-3 1.346-3 3c0 .353.072.687.185 1.002L16 28.838l-6.404-3.784l-1.017 1.722l6.912 4.084a1 1 0 0 0 1.018.001l8.96-5.295c.45.269.97.434 1.531.434c1.654 0 3-1.346 3-3s-1.346-3-3-3m0 4a1.001 1.001 0 0 1 0-2a1.001 1.001 0 0 1 0 2M16 7c.731 0 1.392-.273 1.913-.708L26 11.071V18h2v-7.5a1 1 0 0 0-.491-.861l-8.567-5.062q.056-.28.058-.577c0-1.654-1.346-3-3-3s-3 1.346-3 3s1.346 3 3 3m0-4a1.001 1.001 0 1 1-1 1c0-.552.449-1 1-1"/></svg>
+                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" className="size-9 text-teal-600"><path fill="currentColor" d="m22.509 12.689l-6-3.55a1 1 0 0 0-1.018.001l-6 3.55a1 1 0 0 0-.491.86v6.9c0 .354.187.681.491.86l6 3.55a.99.99 0 0 0 1.018 0l6-3.55a1 1 0 0 0 .491-.86v-6.9a1 1 0 0 0-.491-.861M21 19.88l-5 2.958l-5-2.958v-5.76l5-2.958l5 2.958z"/><path fill="currentColor" d="M6 20.184V11.07l6.2-3.664l-1.017-1.722l-6.692 3.955A1 1 0 0 0 4 10.5v9.684A3 3 0 0 0 2 23c0 1.654 1.346 3 3 3s3-1.346 3-3a3 3 0 0 0-2-2.816M5 24a1.001 1.001 0 0 1 0-2a1.001 1.001 0 0 1 0 2m22-4c-1.654 0-3 1.346-3 3c0 .353.072.687.185 1.002L16 28.838l-6.404-3.784l-1.017 1.722l6.912 4.084a1 1 0 0 0 1.018.001l8.96-5.295c.45.269.97.434 1.531.434c1.654 0 3-1.346 3-3s-1.346-3-3-3m0 4a1.001 1.001 0 0 1 0-2a1.001 1.001 0 0 1 0 2M16 7c.731 0 1.392-.273 1.913-.708L26 11.071V18h2v-7.5a1 1 0 0 0-.491-.861l-8.567-5.062q.056-.28.058-.577c0-1.654-1.346-3-3-3s-3 1.346-3 3s1.346 3 3 3m0-4a1.001 1.001 0 1 1-1 1c0-.552.449-1 1-1"/></svg>
                  </div>
                     </div>
 
@@ -46,7 +46,7 @@ export default function Section5 () {
                 <div className='h-full '>
                     <div className='w-15 h-15 rounded-xl  bg-teal-500/20 backdrop-blur-2xl   ml-4 flex items-center justify-center mt-4'>
                  <div className='absolute  rounded-full blur-3x -z-10'>
-                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" class="size-9 text-teal-600"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M15.5 9L7 14v20l8.5 5l8.5 5l8.5-5l8.5-5V14l-8.5-5L24 4zM41 14L24 24M7 14l17 10m0 20V24m8-5v20m9-15L24 34m0 0L7 24m9 15V19M32 9L16 19m16 0L16 9"/></svg>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" className="size-9 text-teal-600"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="M15.5 9L7 14v20l8.5 5l8.5 5l8.5-5l8.5-5V14l-8.5-5L24 4zM41 14L24 24M7 14l17 10m0 20V24m8-5v20m9-15L24 34m0 0L7 24m9 15V19M32 9L16 19m16 0L16 9"/></svg>
                  </div>
                     </div>
 
@@ -62,7 +62,7 @@ export default function Section5 () {
                 <div className='h-full '>
                     <div className='w-15 h-15 rounded-xl  bg-teal-500/20 backdrop-blur-2xl   ml-4 flex items-center justify-center mt-4'>
                  <div className='absolute  rounded-full blur-3x -z-10'>
-                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="size-9 text-teal-600"><path fill="currentColor" d="M8.7 2.48a3.5 3.5 0 0 1 2.6 0l5.757 2.304c.57.227.943.779.943 1.392v5.859a3.5 3.5 0 0 0-.5-.036h-4a3.5 3.5 0 0 0-2.735 5.685a3.5 3.5 0 0 1-2.065-.166l-5.757-2.303A1.5 1.5 0 0 1 2 13.822V6.176a1.5 1.5 0 0 1 .943-1.392zM5.703 6.043a.5.5 0 1 0-.406.914L9.5 8.824V13.5a.5.5 0 0 0 1 0V8.824l4.203-1.868a.5.5 0 1 0-.406-.914L10 7.952zM13.5 13a2.5 2.5 0 0 0 0 5h.5a.5.5 0 0 0 0-1h-.5a1.5 1.5 0 0 1 0-3h.5a.5.5 0 0 0 0-1zm3.5 0a.5.5 0 1 0 0 1h.5a1.5 1.5 0 0 1 0 3H17a.5.5 0 1 0 0 1h.5a2.5 2.5 0 0 0 0-5zm-4 2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 1 1 0 1h-4a.5.5 0 0 1-.5-.5"/></svg>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" className="size-9 text-teal-600"><path fill="currentColor" d="M8.7 2.48a3.5 3.5 0 0 1 2.6 0l5.757 2.304c.57.227.943.779.943 1.392v5.859a3.5 3.5 0 0 0-.5-.036h-4a3.5 3.5 0 0 0-2.735 5.685a3.5 3.5 0 0 1-2.065-.166l-5.757-2.303A1.5 1.5 0 0 1 2 13.822V6.176a1.5 1.5 0 0 1 .943-1.392zM5.703 6.043a.5.5 0 1 0-.406.914L9.5 8.824V13.5a.5.5 0 0 0 1 0V8.824l4.203-1.868a.5.5 0 1 0-.406-.914L10 7.952zM13.5 13a2.5 2.5 0 0 0 0 5h.5a.5.5 0 0 0 0-1h-.5a1.5 1.5 0 0 1 0-3h.5a.5.5 0 0 0 0-1zm3.5 0a.5.5 0 1 0 0 1h.5a1.5 1.5 0 0 1 0 3H17a.5.5 0 1 0 0 1h.5a2.5 2.5 0 0 0 0-5zm-4 2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 1 1 0 1h-4a.5.5 0 0 1-.5-.5"/></svg>
                  </div>
                     </div>
 
@@ -79,7 +79,7 @@ export default function Section5 () {
                 <div className='h-full '>
                     <div className='w-15 h-15 rounded-xl  bg-teal-500/20 backdrop-blur-2xl   ml-4 flex items-center justify-center mt-4'>
                  <div className='absolute  rounded-full blur-3x -z-10'>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" class="size-9 text-teal-600"><path fill="currentColor" d="M30.47 18.28V7.62h-1.52v9.14h-1.52v-1.52H25.9v12.19h1.53V25.9h3.04v-1.52H32v-6.1zm-6.09-6.09h1.52v3.05h-1.52ZM6.09 27.43v1.52h1.53v1.53h1.52v-1.53h13.71v1.53h1.53v-1.53h1.52v-1.52zm16.76-9.15h1.53v3.05h-1.53Zm0-7.61h1.53v1.52h-1.53Zm-3.04 6.09h3.04v1.52h-3.04ZM9.14 30.48h13.71V32H9.14Zm10.67-9.15h3.04v1.53h-3.04Zm-1.53-3.05h1.53v3.05h-1.53Zm0-16.76h1.53v1.53h-1.53Zm-4.57 22.86h4.57v1.52h-4.57Zm0-24.38h4.57v1.52h-4.57Zm-1.52 18.28h1.52v3.05h-1.52Zm0-16.76h1.52v1.53h-1.52ZM9.14 16.76h3.05v1.52H9.14Zm13.71-6.09V9.14h-6.09V4.57h1.52V3.05h-4.57v1.52h1.52v4.57H9.14v1.53z"/><path fill="currentColor" d="M9.14 21.33h3.05v1.53H9.14Zm-1.52-3.05h1.52v3.05H7.62Zm0-7.61h1.52v1.52H7.62Zm-1.53 1.52h1.53v3.05H6.09Zm0 3.05H4.57v1.52H3.04V7.62H1.52v10.66H0v6.1h1.52v1.52h3.05v1.53h1.52z"/></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" className="size-9 text-teal-600"><path fill="currentColor" d="M30.47 18.28V7.62h-1.52v9.14h-1.52v-1.52H25.9v12.19h1.53V25.9h3.04v-1.52H32v-6.1zm-6.09-6.09h1.52v3.05h-1.52ZM6.09 27.43v1.52h1.53v1.53h1.52v-1.53h13.71v1.53h1.53v-1.53h1.52v-1.52zm16.76-9.15h1.53v3.05h-1.53Zm0-7.61h1.53v1.52h-1.53Zm-3.04 6.09h3.04v1.52h-3.04ZM9.14 30.48h13.71V32H9.14Zm10.67-9.15h3.04v1.53h-3.04Zm-1.53-3.05h1.53v3.05h-1.53Zm0-16.76h1.53v1.53h-1.53Zm-4.57 22.86h4.57v1.52h-4.57Zm0-24.38h4.57v1.52h-4.57Zm-1.52 18.28h1.52v3.05h-1.52Zm0-16.76h1.52v1.53h-1.52ZM9.14 16.76h3.05v1.52H9.14Zm13.71-6.09V9.14h-6.09V4.57h1.52V3.05h-4.57v1.52h1.52v4.57H9.14v1.53z"/><path fill="currentColor" d="M9.14 21.33h3.05v1.53H9.14Zm-1.52-3.05h1.52v3.05H7.62Zm0-7.61h1.52v1.52H7.62Zm-1.53 1.52h1.53v3.05H6.09Zm0 3.05H4.57v1.52H3.04V7.62H1.52v10.66H0v6.1h1.52v1.52h3.05v1.53h1.52z"/></svg>
                  </div>
                     </div>
 
@@ -95,7 +95,7 @@ export default function Section5 () {
                 <div className='h-full '>
                     <div className='w-15 h-15 rounded-xl  bg-teal-500/20 backdrop-blur-2xl   ml-4 flex items-center justify-center mt-4'>
                  <div className='absolute  rounded-full blur-3x -z-10'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="size-9 text-teal-600"><path fill="currentColor" d="M17.001 4a5 5 0 1 1-.892 9.92l-2.651 1.989q.042.29.043.591a4 4 0 1 1-7.966-.524L1.709 14.43l.75-1.854l3.826 1.545a4 4 0 0 1 3.697-1.592l2.04-3.061A5 5 0 0 1 17.002 4m-7.5 10.5c-.464 0-.892.158-1.231.424l1.606.649a1 1 0 0 1-.75 1.854L7.52 16.78a2 2 0 1 0 1.981-2.28m3.364-2.69l-.983 1.476c.284.21.54.458.758.735l1.36-1.02a5 5 0 0 1-1.135-1.191M17 6a3 3 0 1 0 0 6a3 3 0 0 0 0-6m0 1a2 2 0 1 1 0 4a2 2 0 0 1 0-4"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="size-9 text-teal-600"><path fill="currentColor" d="M17.001 4a5 5 0 1 1-.892 9.92l-2.651 1.989q.042.29.043.591a4 4 0 1 1-7.966-.524L1.709 14.43l.75-1.854l3.826 1.545a4 4 0 0 1 3.697-1.592l2.04-3.061A5 5 0 0 1 17.002 4m-7.5 10.5c-.464 0-.892.158-1.231.424l1.606.649a1 1 0 0 1-.75 1.854L7.52 16.78a2 2 0 1 0 1.981-2.28m3.364-2.69l-.983 1.476c.284.21.54.458.758.735l1.36-1.02a5 5 0 0 1-1.135-1.191M17 6a3 3 0 1 0 0 6a3 3 0 0 0 0-6m0 1a2 2 0 1 1 0 4a2 2 0 0 1 0-4"/></svg>
                  </div>
                     </div>
 

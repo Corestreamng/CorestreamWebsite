@@ -163,7 +163,7 @@ const ViewUser: React.FC = () => {
         <div className="lg:col-span-2">
           <div className="bg-white rounded-xl border border-gray-200 p-6 sm:p-8">
             <div className="flex items-start gap-6 mb-6 pb-6 border-b">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white text-3xl font-bold">
+              <div className="w-24 h-24 rounded-full bg-linear-to-br from-green-400 to-green-600 flex items-center justify-center text-white text-3xl font-bold">
                 {user.name.charAt(0)}
               </div>
               <div className="flex-1">
@@ -305,7 +305,7 @@ const ViewUser: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl border border-green-200 p-5 sm:p-6">
+          <div className="bg-linear-to-br from-green-50 to-blue-50 rounded-xl border border-green-200 p-5 sm:p-6">
             <h3 className="text-base font-semibold mb-4">Activity Stats</h3>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white rounded-lg p-4 text-center">

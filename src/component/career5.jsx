@@ -15,7 +15,7 @@ export default function Career5() {
       </h1>
 
       <p className="text-center text-sm md:text-base text-gray-400 mt-6">
-        At Corestream, we're passionate about more than just work. Our mission
+        At Corestream, we&apos;re passionate about more than just work. Our mission
         <br className="hidden md:block" />
         drives us to create meaningful impact
       </p>

@@ -147,6 +147,7 @@ export default function Service() {
   );
 }
 
+// eslint-disable-next-line react/prop-types
 function Card({ color, title, text }) {
   const colors = {
     blue: "bg-blue-100",

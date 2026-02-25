@@ -31,7 +31,7 @@ export default function Community3() {
 
             <p className="text-base text-gray-500 px-6 md:px-20">
               Tech Notions (by Corestream) helps you get familiar with the tech space.
-              Develop your skills and learn what's needed to succeed as a professional in tech.
+              Develop your skills and learn what&apos;s needed to succeed as a professional in tech.
             </p>
 
             <button className="w-[120px] h-[48px] bg-gray-200 mt-8 ml-6 md:ml-20 rounded-xl">
