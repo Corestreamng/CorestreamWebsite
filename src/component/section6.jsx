@@ -28,7 +28,7 @@ export default function Section6() {
           OUR  CASE   STUDY
         </h2>
         <h2 className="text-2xl md:text-5xl font-bold text-gray-900 py-4 px-2">
-          Some projects we've built
+          Some projects we&apos;ve built
         </h2>
         <p className="text-xl md:text-md text-center text-gray-400 scale-95 ">
           Explore our case studies to see our detailed process.
@@ -39,7 +39,7 @@ export default function Section6() {
       <div className="w-full mt-16">
         <div className="flex space-x-6 overflow-x-auto px-4 py-6 scrollbar-hide snap-x snap-mandatory">
           {cards.map((cards, i) => ( 
-            <div className='h-auto'>
+            <div key={i} className='h-auto'>
             <div
               key={i}
               className="flex-none w-[260px] sm:w-[280px] md:w-140 h-90 rounded-3xl flex flex-col shadow-lg overflow-hidden snap-start hover:scale-105 transition-transform duration-300"
@@ -77,7 +77,7 @@ export default function Section6() {
       </div>
 
       {/* Custom scrollbar hide */}
-      <style jsx>{`
+      <style>{`
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
         }

@@ -9,7 +9,7 @@ export default function Career9() {
      <div className='h-auto md:min-h-screen'>
       <h3 className='tracking-widest font-medium text-center py-20 text-gray-400'>WORK AT ENYATA</h3>
       <h1 className='text-2xl text-center md:text-6xl font-semibold -mt-16 text-gray-800'>Explore Open Position</h1>
-          <p className='text-base md:text-xl text-center py-6 text-gray-500 '>Find Your Role in Shaping Africa's Tech Future.</p>
+          <p className='text-base md:text-xl text-center py-6 text-gray-500 '>Find Your Role in Shaping Africa&apos;s Tech Future.</p>
 
           <div className='w-full md:max-w-4xl h-auto md:mx-30'>
             <div className='grid grid-cols-1 md:grid-cols-2 mb-30'>

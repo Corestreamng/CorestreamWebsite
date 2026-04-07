@@ -47,7 +47,7 @@ export default function Contact () {
               className='text-2xl px-12 md:text-7xl text-white md:px-12'
               variants={itemVariants}
             >
-              There's no limit to what  
+              There&apos;s no limit to what  
             </motion.p>
              <motion.p 
                className='text-2xl text-center md:text-7xl text-white'
@@ -64,7 +64,7 @@ export default function Contact () {
               className='text-sm md:text-gray-200 text-center py-6'
                variants={itemVariants}
              >
-               Do you have an idea or solution? Let's work together to <br/> build it into technology
+               Do you have an idea or solution? Let&apos;s work together to <br/> build it into technology
              </motion.p> 
         </motion.div>
          </motion.div>
